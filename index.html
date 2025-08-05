@@ -708,143 +708,3526 @@
     <script>
         // All 300 questions with explanations
         const allQuestions = [
-            {
-                text: "What does the Trust Score in Intuition indicate?",
-                options: [
-                    { text: "A system to determine credibility", correct: true },
-                    { text: "A vote counter", correct: false },
-                    { text: "A user rating", correct: false }
-                ],
-                explanation: "The Trust Score is a system to determine the credibility of claims based on community validation."
-            },
-            {
-                text: "How many backers does a claim need to be considered strong?",
-                options: [
-                    { text: "1", correct: false },
-                    { text: "3", correct: false },
-                    { text: "5", correct: true }
-                ],
-                explanation: "A claim needs 5 backers to be considered strong in the Intuition system."
-            },
-            {
-                text: "What is a bonding curve used for in Intuition?",
-                options: [
-                    { text: "To visualize trust", correct: false },
-                    { text: "To fund data speculation", correct: true },
-                    { text: "To rate users", correct: false }
-                ],
-                explanation: "Bonding curves are used to fund data speculation in the Intuition ecosystem."
-            },
-            {
-                text: "Which of the following is a key feature of Intuition?",
-                options: [
-                    { text: "Decentralized gaming", correct: false },
-                    { text: "Decentralized claims & reputation", correct: true },
-                    { text: "Online banking", correct: false }
-                ],
-                explanation: "Intuition's key feature is its decentralized claims and reputation system."
-            },
-            {
-                text: "In Intuition, what role do Intuits play?",
-                options: [
-                    { text: "Submit claims", correct: true },
-                    { text: "Back bad data", correct: false },
-                    { text: "Refute all claims", correct: false }
-                ],
-                explanation: "Intuits are participants who submit claims to the network."
-            },
-            {
-                text: "Why are ZK proofs important in Intuition's design?",
-                options: [
-                    { text: "Ensure privacy", correct: true },
-                    { text: "Speed up transactions", correct: false },
-                    { text: "Confuse users", correct: false }
-                ],
-                explanation: "Zero-knowledge proofs help ensure privacy in Intuition's design."
-            },
-            {
-                text: "What type of data structure does a claim in Intuition use?",
-                options: [
-                    { text: "Triple (subject, predicate, object)", correct: true },
-                    { text: "Single strings", correct: false },
-                    { text: "Hash tables", correct: false }
-                ],
-                explanation: "Claims in Intuition use a triple structure of subject, predicate, and object."
-            },
-            {
-                text: "Which mechanism does Intuition use to reach consensus?",
-                options: [
-                    { text: "Proof of Work", correct: false },
-                    { text: "Voting", correct: false },
-                    { text: "Intent-based consensus", correct: true }
-                ],
-                explanation: "Intuition uses intent-based consensus to validate claims."
-            },
-            {
-                text: "Where can you find the reputation of a backer?",
-                options: [
-                    { text: "In their wallet address", correct: false },
-                    { text: "In TripleStats", correct: true },
-                    { text: "In the blockchain logs", correct: false }
-                ],
-                explanation: "Backer reputation can be found in TripleStats."
-            },
-            {
-                text: "What does a high trust score suggest about a claim?",
-                options: [
-                    { text: "Low reliability", correct: false },
-                    { text: "High agreement among Intuits", correct: true },
-                    { text: "Spam", correct: false }
-                ],
-                explanation: "A high trust score indicates strong agreement among Intuits about the claim's validity."
-            },
-            {
-                text: "What technology is used to write queries in Intuition's API?",
-                options: [
-                    { text: "SQL", correct: false },
-                    { text: "GraphQL", correct: true },
-                    { text: "REST", correct: false }
-                ],
-                explanation: "Intuition's API uses GraphQL for writing queries."
-            },
-            {
-                text: "Why is decentralization important for Intuition?",
-                options: [
-                    { text: "For central authority", correct: false },
-                    { text: "For transparency and resilience", correct: true },
-                    { text: "To make things complex", correct: false }
-                ],
-                explanation: "Decentralization provides transparency and resilience to the Intuition network."
-            },
-            {
-                text: "What information is usually part of a claim triple?",
-                options: [
-                    { text: "Backer wallet address", correct: false },
-                    { text: "Timestamp", correct: false },
-                    { text: "Subject, predicate, object", correct: true }
-                ],
-                explanation: "A claim triple consists of subject, predicate, and object."
-            },
-            {
-                text: "What is one reason to back a claim on Intuition?",
-                options: [
-                    { text: "To earn rewards", correct: true },
-                    { text: "To support false claims", correct: false },
-                    { text: "To spam the network", correct: false }
-                ],
-                explanation: "Participants can earn rewards by backing valid claims."
-            },
-            {
-                text: "Which best describes Intuition's mission?",
-                options: [
-                    { text: "Crowd-sourced truth layer", correct: true },
-                    { text: "Blockchain payments", correct: false },
-                    { text: "Web scraping", correct: false }
-                ],
-                explanation: "Intuition aims to be a crowd-sourced truth layer for the internet."
-            },
-            // Add more questions here to reach 300
-            // ... (additional questions would be added in a real implementation)
+                {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, a predicate, and an object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+        {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+      {
+        text: "How many backers does a claim need to be considered strong?",
+        options: [
+          { text: "1", correct: false },
+          { text: "3", correct: false },
+          { text: "5", correct: true }
+        ],
+        explanation: "A claim needs to be backed by 5 or more Intuits to be considered strong and have a high Trust Score."
+      },
+      {
+        text: "What is a bonding curve used for in Intuition?",
+        options: [
+          { text: "To visualize trust", correct: false },
+          { text: "To fund data speculation", correct: true },
+          { text: "To rate users", correct: false }
+        ],
+        explanation: "Bonding curves are a mechanism used in Intuition to fund data speculation, allowing Intuits to provide financial backing for claims they believe are credible."
+      },
+      {
+        text: "Which of the following is a key feature of Intuition?",
+        options: [
+          { text: "Decentralized gaming", correct: false },
+          { text: "Decentralized claims & reputation", correct: true },
+          { text: "Online banking", correct: false }
+        ],
+        explanation: "Intuition's core feature is its decentralized system for managing claims and user reputation, ensuring a transparent and resilient platform."
+      },
+      {
+        text: "In Intuition, what role do Intuits play?",
+        options: [
+          { text: "Submit claims", correct: true },
+          { text: "Back bad data", correct: false },
+          { text: "Refute all claims", correct: false }
+        ],
+        explanation: "Intuits are the users of the platform who submit claims and provide their backing to claims they deem credible."
+      },
+      {
+        text: "Why are ZK proofs important in Intuition's design?",
+        options: [
+          { text: "Ensure privacy", correct: true },
+          { text: "Speed up transactions", correct: false },
+          { text: "Confuse users", correct: false }
+        ],
+        explanation: "Zero-Knowledge (ZK) proofs are used to ensure the privacy of users and their claims, allowing for verification without revealing sensitive information."
+      },
+      {
+        text: "What type of data structure does a claim in Intuition use?",
+        options: [
+          { text: "Triple (subject, predicate, object)", correct: true },
+          { text: "Single strings", correct: false },
+          { text: "Hash tables", correct: false }
+        ],
+        explanation: "A claim in Intuition is structured as a triple, which includes a subject, predicate, and object, providing a clear and verifiable data format."
+      },
+      {
+        text: "Which mechanism does Intuition use to reach consensus?",
+        options: [
+          { text: "Proof of Work", correct: false },
+          { text: "Voting", correct: false },
+          { text: "Intent-based consensus", correct: true }
+        ],
+        explanation: "Intuition uses an innovative intent-based consensus mechanism to reach agreement on the credibility of claims."
+      },
+      {
+        text: "Where can you find the reputation of a backer?",
+        options: [
+          { text: "In their wallet address", correct: false },
+          { text: "In TripleStats", correct: true },
+          { text: "In the blockchain logs", correct: false }
+        ],
+        explanation: "The reputation of a backer can be found in TripleStats, which provides detailed information on user activity and trustworthiness."
+      },
+      {
+        text: "What does a high trust score suggest about a claim?",
+        options: [
+          { text: "Low reliability", correct: false },
+          { text: "High agreement among Intuits", correct: true },
+          { text: "Spam", correct: false }
+        ],
+        explanation: "A high Trust Score indicates a high level of agreement among Intuits regarding the credibility of a claim."
+      },
+      {
+        text: "What technology is used to write queries in Intuition's API?",
+        options: [
+          { text: "SQL", correct: false },
+          { text: "GraphQL", correct: true },
+          { text: "REST", correct: false }
+        ],
+        explanation: "Intuition's API utilizes GraphQL for writing queries, which allows for efficient and flexible data retrieval."
+      },
+      {
+        text: "Why is decentralization important for Intuition?",
+        options: [
+          { text: "For central authority", correct: false },
+          { text: "For transparency and resilience", correct: true },
+          { text: "To make things complex", correct: false }
+        ],
+        explanation: "Decentralization is crucial for Intuition as it ensures transparency, resilience against censorship, and a more robust platform."
+      },
+      {
+        text: "What information is usually part of a claim triple?",
+        options: [
+          { text: "Backer wallet address", correct: false },
+          { text: "Timestamp", correct: false },
+          { text: "Subject, predicate, object", correct: true }
+        ],
+        explanation: "A claim triple is composed of a subject, predicate, and object, which are the fundamental components of a claim in Intuition."
+      },
+      {
+        text: "What is one reason to back a claim on Intuition?",
+        options: [
+          { text: "To earn rewards", correct: true },
+          { text: "To support false claims", correct: false },
+          { text: "To spam the network", correct: false }
+        ],
+        explanation: "Backing a claim on Intuition can lead to rewards for users who correctly identify credible information."
+      },
+      {
+        text: "Which best describes Intuition's mission?",
+        options: [
+          { text: "Crowd-sourced truth layer", correct: true },
+          { text: "Blockchain payments", correct: false },
+          { text: "Web scraping", correct: false }
+        ],
+        explanation: "Intuition's mission is to act as a crowd-sourced truth layer, where users can collectively verify and validate information."
+      },
+      {
+        text: "What does the Trust Score in Intuition indicate?",
+        options: [
+          { text: "A system to determine credibility", correct: true },
+          { text: "A vote counter", correct: false },
+          { text: "A user rating", correct: false }
+        ],
+        explanation: "The Trust Score is a system designed to determine the credibility of a claim based on the collective backing of Intuits."
+      },
+            
         ];
 
         // Game state
@@ -954,7 +4337,7 @@
         function getRandomQuestions(questionPool, count) {
             // Make a copy of the array
             const shuffled = [...questionPool];
-            // Fisher-Yates shuffle algorithm
+            // Fisher-Yates shuffle algorithm with better randomization
             for (let i = shuffled.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -1028,7 +4411,7 @@
             streakSpan.textContent = streak;
             gameActive = false;
             
-            setTimeout(nextQuestion, 3000);
+            setTimeout(nextQuestion, 2000); // Reduced from 3000ms to 2000ms
         }
 
         // Answer selection
@@ -1073,8 +4456,8 @@
             scoreSpan.textContent = score;
             streakSpan.textContent = streak;
             
-            // Move to next question
-            setTimeout(nextQuestion, 3000);
+            // Move to next question (reduced delay from 3000ms to 2000ms)
+            setTimeout(nextQuestion, 2000);
         }
 
         // Next question or end game
