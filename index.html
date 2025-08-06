@@ -4534,12 +4534,21 @@
         };
 
         // Download results card
-        downloadBtn.onclick = function() {
-            // Create a temporary card for download with fixed dimensions
+         downloadBtn.onclick = function() {
+            // Create a temporary card container
+            const tempContainer = document.createElement('div');
+            tempContainer.style.position = 'absolute';
+            tempContainer.style.left = '-9999px';
+            tempContainer.style.width = '800px';
+            tempContainer.style.height = '400px';
+            
+            // Create a temporary card with higher quality settings
             const tempCard = document.createElement('div');
             tempCard.className = 'download-card';
             tempCard.style.width = '800px';
             tempCard.style.height = '400px';
+            tempCard.style.padding = '40px';
+            tempCard.style.boxSizing = 'border-box';
             
             // Clone the content from the results card
             const content = resultsCard.querySelector('.results-card-content').cloneNode(true);
@@ -4548,31 +4557,99 @@
             // Add decorations
             const dec1 = document.createElement('div');
             dec1.className = 'decoration decoration-1';
+            dec1.style.position = 'absolute';
+            dec1.style.top = '-50px';
+            dec1.style.right = '-50px';
+            dec1.style.width = '150px';
+            dec1.style.height = '150px';
+            dec1.style.borderRadius = '50%';
+            dec1.style.background = 'radial-gradient(circle, rgba(0, 201, 255, 0.1) 0%, transparent 70%)';
             tempCard.appendChild(dec1);
             
             const dec2 = document.createElement('div');
             dec2.className = 'decoration decoration-2';
+            dec2.style.position = 'absolute';
+            dec2.style.bottom = '-50px';
+            dec2.style.left = '-50px';
+            dec2.style.width = '150px';
+            dec2.style.height = '150px';
+            dec2.style.borderRadius = '50%';
+            dec2.style.background = 'radial-gradient(circle, rgba(146, 254, 157, 0.1) 0%, transparent 70%)';
             tempCard.appendChild(dec2);
             
-            // Add to body temporarily
-            document.body.appendChild(tempCard);
+            // Add background gradient
+            tempCard.style.background = 'linear-gradient(135deg, #121212 0%, #000 100%)';
+            tempCard.style.borderRadius = '16px';
+            tempCard.style.color = '#fff';
+            tempCard.style.position = 'relative';
+            tempCard.style.overflow = 'hidden';
+            tempCard.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+            tempCard.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
             
-            // Generate the image
+            // Add pseudo-element for radial gradient
+            const pseudoStyle = document.createElement('style');
+            pseudoStyle.textContent = `
+                .download-card::before {
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: radial-gradient(circle, rgba(0, 201, 255, 0.1) 0%, transparent 70%);
+                    z-index: 0;
+                }
+            `;
+            document.head.appendChild(pseudoStyle);
+            
+            // Add watermark
+            const watermark = document.createElement('div');
+            watermark.className = 'watermark';
+            watermark.textContent = 'Intuition Quiz';
+            watermark.style.position = 'absolute';
+            watermark.style.bottom = '15px';
+            watermark.style.right = '20px';
+            watermark.style.color = 'rgba(255, 255, 255, 0.2)';
+            watermark.style.fontSize = '0.8rem';
+            watermark.style.fontWeight = '300';
+            tempCard.appendChild(watermark);
+            
+            tempContainer.appendChild(tempCard);
+            document.body.appendChild(tempContainer);
+            
+            // Generate the image with improved settings
             html2canvas(tempCard, {
-                width: 800,
-                height: 400,
-                scale: 2, // Higher quality
-                backgroundColor: null,
+                scale: 3, // Triple the resolution for better quality
                 logging: false,
-                useCORS: true
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: null,
+                letterRendering: true,
+                quality: 1, // Highest quality
+                windowWidth: 800,
+                windowHeight: 400
             }).then(canvas => {
-                const link = document.createElement('a');
-                link.download = `intuition-iq-${playerName}-${score}.png`;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
-                
-                // Remove the temporary card
-                document.body.removeChild(tempCard);
+                // Convert canvas to blob for better mobile support
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.download = `intuition-iq-${playerName}-${score}.png`;
+                    link.href = URL.createObjectURL(blob);
+                    
+                    // Trigger download
+                    const clickEvent = new MouseEvent('click', {
+                        view: window,
+                        bubbles: true,
+                        cancelable: false
+                    });
+                    link.dispatchEvent(clickEvent);
+                    
+                    // Clean up
+                    setTimeout(() => {
+                        URL.revokeObjectURL(link.href);
+                        document.body.removeChild(tempContainer);
+                        document.head.removeChild(pseudoStyle);
+                    }, 100);
+                }, 'image/png', 1); // Highest quality PNG
             });
         };
 
@@ -4592,3 +4669,4 @@
     </script>
 </body>
 </html>
+
