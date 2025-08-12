@@ -952,142 +952,2642 @@
         // All 300 questions with explanations
         const allQuestions = [
             {
-                text: "What does the Trust Score in Intuition indicate?",
-                options: [
-                    { text: "A system to determine credibility", correct: true },
-                    { text: "A vote counter", correct: false },
-                    { text: "A user rating", correct: false }
-                ],
-                explanation: "The Trust Score is a system to determine the credibility of claims based on community validation."
-            },
-            {
-                text: "How many backers does a claim need to be considered strong?",
-                options: [
-                    { text: "1", correct: false },
-                    { text: "3", correct: false },
-                    { text: "5", correct: true }
-                ],
-                explanation: "A claim needs 5 backers to be considered strong in the Intuition system."
-            },
-            {
-                text: "What is a bonding curve used for in Intuition?",
-                options: [
-                    { text: "To visualize trust", correct: false },
-                    { text: "To fund data speculation", correct: true },
-                    { text: "To rate users", correct: false }
-                ],
-                explanation: "Bonding curves are used to fund data speculation in the Intuition ecosystem."
-            },
-            {
-                text: "Which of the following is a key feature of Intuition?",
-                options: [
-                    { text: "Decentralized gaming", correct: false },
-                    { text: "Decentralized claims & reputation", correct: true },
-                    { text: "Online banking", correct: false }
-                ],
-                explanation: "Intuition's key feature is its decentralized claims and reputation system."
-            },
-            {
-                text: "In Intuition, what role do Intuits play?",
-                options: [
-                    { text: "Submit claims", correct: true },
-                    { text: "Back bad data", correct: false },
-                    { text: "Refute all claims", correct: false }
-                ],
-                explanation: "Intuits are participants who submit claims to the network."
-            },
-            {
-                text: "Why are ZK proofs important in Intuition's design?",
-                options: [
-                    { text: "Ensure privacy", correct: true },
-                    { text: "Speed up transactions", correct: false },
-                    { text: "Confuse users", correct: false }
-                ],
-                explanation: "Zero-knowledge proofs help ensure privacy in Intuition's design."
-            },
-            {
-                text: "What type of data structure does a claim in Intuition use?",
-                options: [
-                    { text: "Triple (subject, predicate, object)", correct: true },
-                    { text: "Single strings", correct: false },
-                    { text: "Hash tables", correct: false }
-                ],
-                explanation: "Claims in Intuition use a triple structure of subject, predicate, and object."
-            },
-            {
-                text: "Which mechanism does Intuition use to reach consensus?",
-                options: [
-                    { text: "Proof of Work", correct: false },
-                    { text: "Voting", correct: false },
-                    { text: "Intent-based consensus", correct: true }
-                ],
-                explanation: "Intuition uses intent-based consensus to validate claims."
-            },
-            {
-                text: "Where can you find the reputation of a backer?",
-                options: [
-                    { text: "In their wallet address", correct: false },
-                    { text: "In TripleStats", correct: true },
-                    { text: "In the blockchain logs", correct: false }
-                ],
-                explanation: "Backer reputation can be found in TripleStats."
-            },
-            {
-                text: "What does a high trust score suggest about a claim?",
-                options: [
-                    { text: "Low reliability", correct: false },
-                    { text: "High agreement among Intuits", correct: true },
-                    { text: "Spam", correct: false }
-                ],
-                explanation: "A high trust score indicates strong agreement among Intuits about the claim's validity."
-            },
-            {
-                text: "What technology is used to write queries in Intuition's API?",
-                options: [
-                    { text: "SQL", correct: false },
-                    { text: "GraphQL", correct: true },
-                    { text: "REST", correct: false }
-                ],
-                explanation: "Intuition's API uses GraphQL for writing queries."
-            },
-            {
-                text: "Why is decentralization important for Intuition?",
-                options: [
-                    { text: "For central authority", correct: false },
-                    { text: "For transparency and resilience", correct: true },
-                    { text: "To make things complex", correct: false }
-                ],
-                explanation: "Decentralization provides transparency and resilience to the Intuition network."
-            },
-            {
-                text: "What information is usually part of a claim triple?",
-                options: [
-                    { text: "Backer wallet address", correct: false },
-                    { text: "Timestamp", correct: false },
-                    { text: "Subject, predicate, object", correct: true }
-                ],
-                explanation: "A claim triple consists of subject, predicate, and object."
-            },
-            {
-                text: "What is one reason to back a claim on Intuition?",
-                options: [
-                    { text: "To earn rewards", correct: true },
-                    { text: "To support false claims", correct: false },
-                    { text: "To spam the network", correct: false }
-                ],
-                explanation: "Participants can earn rewards by backing valid claims."
-            },
-            {
-                text: "Which best describes Intuition's mission?",
-                options: [
-                    { text: "Crowd-sourced truth layer", correct: true },
-                    { text: "Blockchain payments", correct: false },
-                    { text: "Web scraping", correct: false }
-                ],
-                explanation: "Intuition aims to be a crowd-sourced truth layer for the internet."
-            },
-            // Add more questions here to reach 300
-            // ... (additional questions would be added in a real implementation)
+    text: "What is the primary purpose of the Intuition project?",
+    options: [
+        { text: "Facilitate decentralized predictions", correct: false },
+        { text: "Create a decentralized knowledge graph", correct: true },
+        { text: "Mine cryptocurrencies", correct: false }
+    ],
+    explanation: "Intuition's main goal is to build a decentralized knowledge graph connecting facts, claims, and trust relationships."
+},
+{
+    text: "Which token powers the Intuition protocol?",
+    options: [
+        { text: "TRUST", correct: true },
+        { text: "INTU", correct: false },
+        { text: "ITN", correct: false }
+    ],
+    explanation: "The TRUST token is the native asset used within the Intuition ecosystem."
+},
+{
+    text: "On which blockchain is Intuition primarily built?",
+    options: [
+        { text: "Ethereum", correct: true },
+        { text: "Solana", correct: false },
+        { text: "Polkadot", correct: false }
+    ],
+    explanation: "Intuition is deployed on Ethereum, benefiting from its security and decentralization."
+},
+{
+    text: "What core concept does Intuition focus on storing?",
+    options: [
+        { text: "Financial transactions", correct: false },
+        { text: "Assertions and claims", correct: true },
+        { text: "NFT images", correct: false }
+    ],
+    explanation: "Intuition stores claims, assertions, and the relationships between them in a verifiable manner."
+},
+{
+    text: "How are relationships in Intuition represented?",
+    options: [
+        { text: "As bonding curves", correct: false },
+        { text: "As edges in a graph", correct: true },
+        { text: "As blockchain blocks", correct: false }
+    ],
+    explanation: "Relationships are represented as edges in the decentralized knowledge graph."
+},
+{
+    text: "What economic mechanism does Intuition use to value data?",
+    options: [
+        { text: "Bonding curves", correct: true },
+        { text: "Auction houses", correct: false },
+        { text: "Random draws", correct: false }
+    ],
+    explanation: "Bonding curves are used to assign and adjust value to specific claims or entities in Intuition."
+},
+{
+    text: "Which type of curve is used in Intuition’s bonding mechanism?",
+    options: [
+        { text: "Exponential curve", correct: false },
+        { text: "Continuous token bonding curve", correct: true },
+        { text: "Bell curve", correct: false }
+    ],
+    explanation: "Continuous token bonding curves adjust token price based on supply and demand in real-time."
+},
+{
+    text: "What is the role of the TRUST token in staking?",
+    options: [
+        { text: "Secure the network and signal belief", correct: true },
+        { text: "Purchase NFTs", correct: false },
+        { text: "Pay for gas fees", correct: false }
+    ],
+    explanation: "Users stake TRUST to signal belief in claims or entities, affecting their visibility and credibility."
+},
+{
+    text: "What does staking more TRUST on a claim imply?",
+    options: [
+        { text: "Increased market volatility", correct: false },
+        { text: "Higher confidence in the claim", correct: true },
+        { text: "Lower gas fees", correct: false }
+    ],
+    explanation: "Staking more TRUST signals stronger confidence in the accuracy or relevance of a claim."
+},
+{
+    text: "What is a 'claim' in Intuition’s terminology?",
+    options: [
+        { text: "A smart contract function", correct: false },
+        { text: "A statement or fact in the knowledge graph", correct: true },
+        { text: "A token airdrop", correct: false }
+    ],
+    explanation: "A claim is a statement or fact represented in the knowledge graph with verifiable support."
+},
+{
+    text: "How can users support a claim in Intuition?",
+    options: [
+        { text: "By sending ETH", correct: false },
+        { text: "By staking TRUST", correct: true },
+        { text: "By liking it", correct: false }
+    ],
+    explanation: "Staking TRUST on a claim supports it and can boost its visibility in the network."
+},
+{
+    text: "What happens when a claim’s staking pool grows?",
+    options: [
+        { text: "Its market cap drops", correct: false },
+        { text: "Its valuation and visibility increase", correct: true },
+        { text: "It is automatically deleted", correct: false }
+    ],
+    explanation: "More staking increases valuation and visibility due to bonding curve mechanics."
+},
+{
+    text: "Which concept does Intuition compare to Wikipedia?",
+    options: [
+        { text: "Editable NFTs", correct: false },
+        { text: "Collaborative fact curation", correct: true },
+        { text: "Decentralized gaming", correct: false }
+    ],
+    explanation: "Like Wikipedia, Intuition allows collective contribution to factual knowledge, but in a decentralized way."
+},
+{
+    text: "In Intuition, what does 'trust' represent?",
+    options: [
+        { text: "Emotional belief", correct: false },
+        { text: "Economic signal of belief", correct: true },
+        { text: "Legal ownership", correct: false }
+    ],
+    explanation: "Trust is quantified via staking, serving as an economic signal of belief in a claim."
+},
+{
+    text: "What do bonding curves prevent in Intuition?",
+    options: [
+        { text: "Over-centralization of power", correct: false },
+        { text: "Arbitrary price manipulation", correct: true },
+        { text: "Gas fee inflation", correct: false }
+    ],
+    explanation: "Bonding curves make prices predictable and prevent arbitrary manipulation."
+},
+{
+    text: "What happens when TRUST is unstaked from a claim?",
+    options: [
+        { text: "The claim becomes invisible", correct: false },
+        { text: "The staker gets refunded minus fees", correct: true },
+        { text: "The blockchain reverts the claim", correct: false }
+    ],
+    explanation: "Unstaking returns funds to the user, minus bonding curve transaction costs."
+},
+{
+    text: "How are claims connected in Intuition?",
+    options: [
+        { text: "Via API calls", correct: false },
+        { text: "Via relationship edges", correct: true },
+        { text: "Via proof-of-work mining", correct: false }
+    ],
+    explanation: "Relationship edges link related claims and entities in the graph."
+},
+{
+    text: "Which layer of blockchain does Intuition utilize for execution?",
+    options: [
+        { text: "Layer 1 Ethereum", correct: true },
+        { text: "Layer 2 Polygon", correct: false },
+        { text: "Layer 0 Cosmos", correct: false }
+    ],
+    explanation: "Intuition operates directly on Ethereum’s Layer 1 for execution."
+},
+{
+    text: "What determines the price of TRUST when staking on a claim?",
+    options: [
+        { text: "Arbitrary admin settings", correct: false },
+        { text: "Bonding curve formula", correct: true },
+        { text: "Randomized algorithm", correct: false }
+    ],
+    explanation: "The bonding curve formula determines the token price based on pool size."
+},
+{
+    text: "What does 'minting a claim' in Intuition mean?",
+    options: [
+        { text: "Creating a new NFT", correct: false },
+        { text: "Publishing a new assertion on-chain", correct: true },
+        { text: "Mining ETH", correct: false }
+    ],
+    explanation: "Minting a claim refers to publishing a new assertion on-chain within Intuition."
+}
+{
+  text: "What consensus mechanism secures the Ethereum blockchain used by Intuition?",
+  options: [
+    { text: "Proof of Stake", correct: true },
+    { text: "Proof of Work", correct: false },
+    { text: "Delegated Proof of Stake", correct: false }
+  ],
+  explanation: "Ethereum, on which Intuition is built, transitioned to Proof of Stake in September 2022."
+},
+{
+  text: "What is a key focus of Intuition’s protocol design?",
+  options: [
+    { text: "Storing video content", correct: false },
+    { text: "Trust data creation and verification", correct: true },
+    { text: "NFT minting for art", correct: false }
+  ],
+  explanation: "Intuition focuses on creating and verifying trust data to improve decision-making and knowledge sharing."
+},
+{
+  text: "Which type of asset is bonded when creating claims on Intuition?",
+  options: [
+    { text: "TRUST tokens", correct: true },
+    { text: "Stablecoins", correct: false },
+    { text: "NFTs", correct: false }
+  ],
+  explanation: "TRUST tokens are bonded when making claims to signal confidence and stake economic value."
+},
+{
+  text: "What happens to bonded tokens when a claim is disproven?",
+  options: [
+    { text: "They are burned", correct: false },
+    { text: "They can be redistributed", correct: true },
+    { text: "They disappear", correct: false }
+  ],
+  explanation: "If a claim is disproven, bonded tokens can be redistributed to incentivize accurate information."
+},
+{
+  text: "What type of graph structure does Intuition use to link entities and claims?",
+  options: [
+    { text: "Directed acyclic graph (DAG)", correct: true },
+    { text: "Blockchain tree", correct: false },
+    { text: "Circular graph", correct: false }
+  ],
+  explanation: "Intuition uses a directed acyclic graph structure to connect entities and claims in a structured way."
+},
+{
+  text: "What is the minimum bonding requirement for a claim on Intuition?",
+  options: [
+    { text: "Depends on protocol parameters", correct: true },
+    { text: "Exactly 1 TRUST token", correct: false },
+    { text: "100 TRUST tokens", correct: false }
+  ],
+  explanation: "The minimum bonding requirement varies and is determined by protocol parameters."
+},
+{
+  text: "Which Ethereum layer is Intuition deployed on for scalability?",
+  options: [
+    { text: "Ethereum mainnet", correct: false },
+    { text: "An Ethereum L2", correct: true },
+    { text: "Sidechain", correct: false }
+  ],
+  explanation: "Intuition uses an Ethereum Layer 2 solution for better scalability and lower costs."
+},
+{
+  text: "What is the core value proposition of Intuition?",
+  options: [
+    { text: "High-frequency trading", correct: false },
+    { text: "Decentralized trust and knowledge graph", correct: true },
+    { text: "Music streaming", correct: false }
+  ],
+  explanation: "Intuition offers a decentralized trust and knowledge graph to improve information reliability."
+},
+{
+  text: "Who can make a claim on Intuition?",
+  options: [
+    { text: "Only developers", correct: false },
+    { text: "Anyone with a wallet and TRUST tokens", correct: true },
+    { text: "Only verified institutions", correct: false }
+  ],
+  explanation: "Any user with a crypto wallet and TRUST tokens can participate in making claims."
+},
+{
+  text: "What is one benefit of staking TRUST tokens on a claim?",
+  options: [
+    { text: "It increases the claim’s visibility", correct: true },
+    { text: "It reduces gas fees", correct: false },
+    { text: "It automatically verifies the claim", correct: false }
+  ],
+  explanation: "Staking TRUST tokens signals confidence and increases the visibility of a claim."
+},
+{
+  text: "What happens when multiple people stake on the same claim?",
+  options: [
+    { text: "The claim’s confidence score increases", correct: true },
+    { text: "It becomes private", correct: false },
+    { text: "It triggers an automatic payout", correct: false }
+  ],
+  explanation: "More staking increases the claim’s confidence score, making it more trusted in the network."
+},
+{
+  text: "How does Intuition handle misinformation?",
+  options: [
+    { text: "By deleting claims", correct: false },
+    { text: "By allowing counterclaims and redistributing bonds", correct: true },
+    { text: "By banning users", correct: false }
+  ],
+  explanation: "Counterclaims and economic incentives help filter out misinformation."
+},
+{
+  text: "Which type of data can be represented in Intuition’s network?",
+  options: [
+    { text: "Only financial data", correct: false },
+    { text: "Any verifiable fact or claim", correct: true },
+    { text: "Only blockchain transactions", correct: false }
+  ],
+  explanation: "The protocol can handle any verifiable claim, not just financial or blockchain-specific data."
+},
+{
+  text: "What is an ‘Entity’ in Intuition’s graph?",
+  options: [
+    { text: "A user’s profile picture", correct: false },
+    { text: "A node representing a person, organization, or concept", correct: true },
+    { text: "A crypto wallet address", correct: false }
+  ],
+  explanation: "Entities are nodes in the trust graph representing people, organizations, or concepts."
+},
+{
+  text: "What type of metadata can be attached to a claim?",
+  options: [
+    { text: "References and evidence", correct: true },
+    { text: "Only images", correct: false },
+    { text: "Only wallet addresses", correct: false }
+  ],
+  explanation: "Claims can include metadata such as references, sources, and evidence."
+},
+{
+  text: "What is a ‘Claim’ in Intuition?",
+  options: [
+    { text: "A digital art NFT", correct: false },
+    { text: "A statement linking two entities with a truth value", correct: true },
+    { text: "A cryptocurrency transaction", correct: false }
+  ],
+  explanation: "A claim is a statement in the trust graph linking entities and asserting a truth value."
+},
+{
+  text: "Which cryptographic method secures Intuition transactions?",
+  options: [
+    { text: "Zero-knowledge proofs", correct: false },
+    { text: "Digital signatures", correct: true },
+    { text: "Hash collisions", correct: false }
+  ],
+  explanation: "Transactions are secured using standard blockchain digital signature schemes."
+},
+{
+  text: "Which economic model is used for staking in Intuition?",
+  options: [
+    { text: "Bonding curves", correct: true },
+    { text: "Linear pricing", correct: false },
+    { text: "Auction-based", correct: false }
+  ],
+  explanation: "Bonding curves determine staking costs and rewards dynamically."
+},
+{
+  text: "How does Intuition ensure censorship resistance?",
+  options: [
+    { text: "By relying on centralized servers", correct: false },
+    { text: "By storing data on a decentralized network", correct: true },
+    { text: "By limiting user uploads", correct: false }
+  ],
+  explanation: "Data is stored on decentralized infrastructure to prevent censorship."
+},
+{
+  text: "Which type of incentives does Intuition provide to participants?",
+  options: [
+    { text: "Financial rewards for accuracy", correct: true },
+    { text: "Free merchandise", correct: false },
+    { text: "Voting rights in unrelated DAOs", correct: false }
+  ],
+  explanation: "Participants earn financial incentives for accurate claims and validations."
+}
+{
+    text: "What is the main benefit of using bonding curves in Intuition?",
+    options: [
+        { text: "They allow token supply to grow with demand", correct: true },
+        { text: "They reduce gas fees", correct: false },
+        { text: "They prevent token transfers", correct: false }
+    ],
+    explanation: "Bonding curves allow token prices and supply to adjust automatically based on buy/sell demand."
+},
+{
+    text: "Which blockchain network does Intuition primarily operate on?",
+    options: [
+        { text: "Ethereum", correct: true },
+        { text: "Bitcoin", correct: false },
+        { text: "Solana", correct: false }
+    ],
+    explanation: "Intuition runs on the Ethereum blockchain for security and compatibility with ERC-20 standards."
+},
+{
+    text: "In Intuition, what does a 'claim' represent?",
+    options: [
+        { text: "A personal opinion", correct: false },
+        { text: "A statement or piece of data asserted as true", correct: true },
+        { text: "A staking reward", correct: false }
+    ],
+    explanation: "Claims in Intuition are assertions that can be supported, disputed, and connected to other data."
+},
+{
+    text: "What is the main token of Intuition called?",
+    options: [
+        { text: "TRUST", correct: true },
+        { text: "INT", correct: false },
+        { text: "DATA", correct: false }
+    ],
+    explanation: "TRUST is the main utility token of the Intuition platform."
+},
+{
+    text: "Which mechanism is used for token price discovery in Intuition?",
+    options: [
+        { text: "Automated market maker with bonding curve", correct: true },
+        { text: "Centralized price feed", correct: false },
+        { text: "Manual adjustment by admins", correct: false }
+    ],
+    explanation: "An AMM with a bonding curve handles price discovery without centralized control."
+},
+{
+    text: "What type of data structure does Intuition emphasize?",
+    options: [
+        { text: "Decentralized knowledge graph", correct: true },
+        { text: "Flat database", correct: false },
+        { text: "Single blockchain ledger", correct: false }
+    ],
+    explanation: "The protocol organizes information as a decentralized, interconnected knowledge graph."
+},
+{
+    text: "How are bonding curves visualized in the Intuition Portal?",
+    options: [
+        { text: "As interactive graphs", correct: true },
+        { text: "As plain text tables", correct: false },
+        { text: "As chat messages", correct: false }
+    ],
+    explanation: "The bonding curves are displayed as interactive charts showing price vs. supply."
+},
+{
+    text: "What is a 'support' in Intuition?",
+    options: [
+        { text: "A token airdrop", correct: false },
+        { text: "A positive relationship between claims", correct: true },
+        { text: "A gas refund", correct: false }
+    ],
+    explanation: "A support links two claims to show agreement or backing."
+},
+{
+    text: "Which user action increases the token price on a bonding curve?",
+    options: [
+        { text: "Buying tokens", correct: true },
+        { text: "Selling tokens", correct: false },
+        { text: "Doing nothing", correct: false }
+    ],
+    explanation: "Buying moves up the curve, increasing the token price for the next buyer."
+},
+{
+    text: "What happens when a user sells tokens on a bonding curve?",
+    options: [
+        { text: "Price decreases", correct: true },
+        { text: "Price increases", correct: false },
+        { text: "No change in price", correct: false }
+    ],
+    explanation: "Selling moves down the curve, lowering the price for subsequent buyers."
+},
+{
+    text: "Which type of market structure do Intuition bonding curves replace?",
+    options: [
+        { text: "Order book exchanges", correct: true },
+        { text: "Offline auctions", correct: false },
+        { text: "Random lottery", correct: false }
+    ],
+    explanation: "Bonding curves replace traditional order books with continuous, on-chain pricing."
+},
+{
+    text: "What does 'dispute' mean in the context of Intuition?",
+    options: [
+        { text: "A negative relationship between claims", correct: true },
+        { text: "A failed transaction", correct: false },
+        { text: "A governance proposal", correct: false }
+    ],
+    explanation: "A dispute links two claims to indicate disagreement or contradiction."
+},
+{
+    text: "Why is the TRUST token important for Intuition?",
+    options: [
+        { text: "It powers interactions with claims and relationships", correct: true },
+        { text: "It’s used only for gas fees", correct: false },
+        { text: "It represents NFT ownership", correct: false }
+    ],
+    explanation: "TRUST is used in the creation, support, and dispute of claims."
+},
+{
+    text: "What’s a key benefit of decentralized claims?",
+    options: [
+        { text: "They can be verified and connected without central control", correct: true },
+        { text: "They can only be created by admins", correct: false },
+        { text: "They cannot be challenged", correct: false }
+    ],
+    explanation: "Decentralization ensures openness, verifiability, and resilience."
+},
+{
+    text: "In Intuition, what is 'claim staking' used for?",
+    options: [
+        { text: "To signal confidence in the claim", correct: true },
+        { text: "To pay for API access", correct: false },
+        { text: "To lock liquidity in a pool", correct: false }
+    ],
+    explanation: "Staking TRUST on a claim shows conviction and economic backing."
+},
+{
+    text: "Which sector does Intuition target primarily?",
+    options: [
+        { text: "Decentralized knowledge and reputation systems", correct: true },
+        { text: "Gaming NFTs", correct: false },
+        { text: "Centralized social media", correct: false }
+    ],
+    explanation: "Its focus is on building open, decentralized data and reputation graphs."
+},
+{
+    text: "Who can participate in creating claims on Intuition?",
+    options: [
+        { text: "Anyone with a wallet", correct: true },
+        { text: "Only verified developers", correct: false },
+        { text: "Only governance members", correct: false }
+    ],
+    explanation: "Intuition is open to all users with Ethereum-compatible wallets."
+},
+{
+    text: "What happens if a claim is widely disputed?",
+    options: [
+        { text: "It may lose economic backing", correct: true },
+        { text: "It is deleted from the blockchain", correct: false },
+        { text: "It becomes locked forever", correct: false }
+    ],
+    explanation: "Disputes can shift token flow and reduce a claim's market value."
+},
+{
+    text: "What does the Intuition Portal provide?",
+    options: [
+        { text: "An interface to create and explore claims", correct: true },
+        { text: "A centralized exchange", correct: false },
+        { text: "A mining dashboard", correct: false }
+    ],
+    explanation: "The portal is the main UI for engaging with the Intuition network."
+},
+{
+    text: "Which protocol standard does TRUST token follow?",
+    options: [
+        { text: "ERC-20", correct: true },
+        { text: "BEP-20", correct: false },
+        { text: "SPL", correct: false }
+    ],
+    explanation: "TRUST is implemented as an ERC-20 token on Ethereum."
+}
+{
+    text: "What role do validators play in Intuition’s network?",
+    options: [
+        { text: "They store off-chain data", correct: false },
+        { text: "They validate claims and secure the network", correct: true },
+        { text: "They manage marketing campaigns", correct: false }
+    ],
+    explanation: "Validators in Intuition validate claims and secure the protocol's decentralized infrastructure."
+},
+{
+    text: "Which cryptographic method is primarily used by Intuition for securing claims?",
+    options: [
+        { text: "Zero-knowledge proofs", correct: false },
+        { text: "Public-private key encryption", correct: true },
+        { text: "Merkle tree pruning", correct: false }
+    ],
+    explanation: "Public-private key encryption ensures claims are tied to verifiable identities."
+},
+{
+    text: "What is the primary benefit of staking TRUST tokens?",
+    options: [
+        { text: "Reduced transaction fees", correct: false },
+        { text: "Participating in governance and securing the network", correct: true },
+        { text: "Getting early NFT drops", correct: false }
+    ],
+    explanation: "Staking TRUST enables governance participation and helps secure the network."
+},
+{
+    text: "Which problem does Intuition aim to solve?",
+    options: [
+        { text: "Decentralized lending", correct: false },
+        { text: "Trust and verifiable knowledge in Web3", correct: true },
+        { text: "On-chain gaming performance", correct: false }
+    ],
+    explanation: "Intuition focuses on decentralized trust and verifiable knowledge graphs."
+},
+{
+    text: "Intuition’s claims are stored primarily where?",
+    options: [
+        { text: "In centralized cloud servers", correct: false },
+        { text: "On-chain within the protocol", correct: true },
+        { text: "In local device memory", correct: false }
+    ],
+    explanation: "Claims are recorded on-chain to ensure immutability and decentralization."
+},
+{
+    text: "What type of token standard is TRUST?",
+    options: [
+        { text: "ERC-721", correct: false },
+        { text: "ERC-20", correct: true },
+        { text: "BEP-721", correct: false }
+    ],
+    explanation: "TRUST is an ERC-20 token standard on Ethereum."
+},
+{
+    text: "How does Intuition encourage users to contribute data?",
+    options: [
+        { text: "By paying in ETH", correct: false },
+        { text: "Through token incentives", correct: true },
+        { text: "By giving free merch", correct: false }
+    ],
+    explanation: "Users are rewarded with token incentives for contributing quality claims."
+},
+{
+    text: "Which blockchain is Intuition primarily built on?",
+    options: [
+        { text: "Ethereum", correct: true },
+        { text: "Solana", correct: false },
+        { text: "Avalanche", correct: false }
+    ],
+    explanation: "Intuition is built on the Ethereum network for its security and ecosystem support."
+},
+{
+    text: "What makes Intuition’s claims verifiable?",
+    options: [
+        { text: "They use AI to check validity", correct: false },
+        { text: "They are cryptographically signed", correct: true },
+        { text: "They are verified by a central authority", correct: false }
+    ],
+    explanation: "Claims are signed using cryptographic keys, ensuring authenticity."
+},
+{
+    text: "What is the main function of Intuition’s bonding curves?",
+    options: [
+        { text: "To automate NFT pricing", correct: false },
+        { text: "To determine token prices dynamically", correct: true },
+        { text: "To adjust block rewards", correct: false }
+    ],
+    explanation: "Bonding curves adjust token prices based on supply and demand automatically."
+},
+{
+    text: "How does Intuition differ from traditional databases?",
+    options: [
+        { text: "It uses Excel spreadsheets", correct: false },
+        { text: "It is decentralized and tamper-proof", correct: true },
+        { text: "It relies on single administrators", correct: false }
+    ],
+    explanation: "Decentralization and immutability make Intuition different from traditional databases."
+},
+{
+    text: "What happens when more users stake on a claim?",
+    options: [
+        { text: "The claim gets deleted", correct: false },
+        { text: "The claim gains credibility and value", correct: true },
+        { text: "Nothing changes", correct: false }
+    ],
+    explanation: "Staking increases the perceived credibility and potential value of a claim."
+},
+{
+    text: "What can be visualized with Intuition’s Portal?",
+    options: [
+        { text: "Game leaderboards", correct: false },
+        { text: "Knowledge graphs of claims", correct: true },
+        { text: "Token burn rates", correct: false }
+    ],
+    explanation: "The Portal allows visualization of interconnected claims in knowledge graphs."
+},
+{
+    text: "Why does Intuition use bonding curves for claims?",
+    options: [
+        { text: "To make graphs prettier", correct: false },
+        { text: "To create a price discovery mechanism for claim shares", correct: true },
+        { text: "To speed up transactions", correct: false }
+    ],
+    explanation: "Bonding curves help determine claim share prices based on demand."
+},
+{
+    text: "What is one of the risks of staking on false claims?",
+    options: [
+        { text: "Permanent account ban", correct: false },
+        { text: "Losing staked tokens", correct: true },
+        { text: "Getting a warning message", correct: false }
+    ],
+    explanation: "Stakers risk losing tokens if a claim is proven false."
+},
+{
+    text: "What is an example of an Intuition claim?",
+    options: [
+        { text: "‘Water boils at 100°C’", correct: true },
+        { text: "‘2+2 equals 5’", correct: false },
+        { text: "‘The sun is made of cheese’", correct: false }
+    ],
+    explanation: "A valid claim example could be a scientific fact like water boiling at 100°C."
+},
+{
+    text: "Who can create claims on Intuition?",
+    options: [
+        { text: "Only developers", correct: false },
+        { text: "Any user with a connected wallet", correct: true },
+        { text: "Only token holders", correct: false }
+    ],
+    explanation: "Anyone with a wallet can create claims on the platform."
+},
+{
+    text: "What is the primary governance token of Intuition?",
+    options: [
+        { text: "ITN", correct: false },
+        { text: "TRUST", correct: true },
+        { text: "INT", correct: false }
+    ],
+    explanation: "TRUST is both the governance and utility token of Intuition."
+},
+{
+    text: "What is a claim share?",
+    options: [
+        { text: "A piece of company equity", correct: false },
+        { text: "A tokenized stake in a claim", correct: true },
+        { text: "A document proving ownership", correct: false }
+    ],
+    explanation: "Claim shares represent tokenized stakes in the credibility of a claim."
+},
+{
+    text: "How are claim shares bought and sold?",
+    options: [
+        { text: "Through bonding curves", correct: true },
+        { text: "Through auction houses", correct: false },
+        { text: "Via OTC trades", correct: false }
+    ],
+    explanation: "Claim shares are traded via bonding curve mechanisms."
+},
+{
+    text: "What is a bonding curve?",
+    options: [
+        { text: "A mathematical model for token pricing", correct: true },
+        { text: "A curve used in AI training", correct: false },
+        { text: "A graph showing blockchain transactions", correct: false }
+    ],
+    explanation: "Bonding curves mathematically determine prices based on token supply."
+},
+{
+    text: "Why are claims on Intuition immutable?",
+    options: [
+        { text: "They are stored in PDF format", correct: false },
+        { text: "They are recorded on a blockchain", correct: true },
+        { text: "They are backed up daily", correct: false }
+    ],
+    explanation: "Blockchain storage ensures immutability of claims."
+},
+{
+    text: "What does staking more tokens on a claim indicate?",
+    options: [
+        { text: "Decreased confidence", correct: false },
+        { text: "Increased confidence", correct: true },
+        { text: "Indifference", correct: false }
+    ],
+    explanation: "Higher staking signals higher confidence in a claim's truth."
+},
+{
+    text: "Which portal feature allows discovery of related claims?",
+    options: [
+        { text: "Trending tab", correct: false },
+        { text: "Knowledge graph visualization", correct: true },
+        { text: "Wallet tracker", correct: false }
+    ],
+    explanation: "Knowledge graphs show related and connected claims."
+},
+{
+    text: "What happens if demand for a claim’s shares increases?",
+    options: [
+        { text: "Share price drops", correct: false },
+        { text: "Share price rises", correct: true },
+        { text: "Nothing happens", correct: false }
+    ],
+    explanation: "Bonding curves increase share prices as demand grows."
+},
+{
+    text: "What is the purpose of governance in Intuition?",
+    options: [
+        { text: "To choose marketing colors", correct: false },
+        { text: "To make protocol decisions", correct: true },
+        { text: "To manage Twitter content", correct: false }
+    ],
+    explanation: "Governance allows token holders to make protocol-level decisions."
+},
+{
+    text: "Which type of market model do Intuition claim shares follow?",
+    options: [
+        { text: "Fixed price model", correct: false },
+        { text: "Bonding curve model", correct: true },
+        { text: "Dutch auction", correct: false }
+    ],
+    explanation: "Claim shares are priced using bonding curve models."
+},
+{
+    text: "What is the minimum requirement to interact with Intuition?",
+    options: [
+        { text: "A verified email", correct: false },
+        { text: "A blockchain wallet", correct: true },
+        { text: "A social media account", correct: false }
+    ],
+    explanation: "A blockchain wallet is needed to interact with Intuition."
+}
+{
+    text: "What role do curators play in the Intuition ecosystem?",
+    options: [
+        { text: "They validate and organize claims", correct: true },
+        { text: "They mint new tokens", correct: false },
+        { text: "They manage staking pools only", correct: false }
+    ],
+    explanation: "Curators validate, organize, and promote high-quality claims for better discovery."
+},
+{
+    text: "Which blockchain standard is the TRUST token based on?",
+    options: [
+        { text: "BEP-20", correct: false },
+        { text: "ERC-20", correct: true },
+        { text: "TRC-20", correct: false }
+    ],
+    explanation: "The TRUST token is an ERC-20 standard token on Ethereum."
+},
+{
+    text: "What is the primary utility of staking TRUST in Intuition?",
+    options: [
+        { text: "To farm NFTs", correct: false },
+        { text: "To back claims and signal trust", correct: true },
+        { text: "To mine Bitcoin", correct: false }
+    ],
+    explanation: "Staking TRUST backs claims with economic weight, signaling credibility."
+},
+{
+    text: "In Intuition, what does a 'claim' represent?",
+    options: [
+        { text: "A verified transaction", correct: false },
+        { text: "A statement or fact backed by trust", correct: true },
+        { text: "A smart contract function", correct: false }
+    ],
+    explanation: "A claim is a statement that can be supported by trust and curated for quality."
+},
+{
+    text: "What feature allows users to speculate on information in Intuition?",
+    options: [
+        { text: "Bonding curves", correct: true },
+        { text: "Liquidity farming", correct: false },
+        { text: "Token burns", correct: false }
+    ],
+    explanation: "Bonding curves let users buy/sell trust in claims based on supply-demand."
+},
+{
+    text: "Which layer of the internet does Intuition aim to enhance?",
+    options: [
+        { text: "Information layer", correct: true },
+        { text: "Transport layer", correct: false },
+        { text: "Network layer", correct: false }
+    ],
+    explanation: "Intuition enhances the information layer with trust-based validation."
+},
+{
+    text: "How are claim prices determined in Intuition?",
+    options: [
+        { text: "Central authority", correct: false },
+        { text: "Bonding curve mechanism", correct: true },
+        { text: "Random assignment", correct: false }
+    ],
+    explanation: "Claim prices are dynamically set via bonding curves based on market activity."
+},
+{
+    text: "What is the symbol for the Intuition token?",
+    options: [
+        { text: "TRUST", correct: true },
+        { text: "INT", correct: false },
+        { text: "IQ", correct: false }
+    ],
+    explanation: "TRUST is the symbol for Intuition's native token."
+},
+{
+    text: "Which type of token is TRUST?",
+    options: [
+        { text: "Utility token", correct: true },
+        { text: "Stablecoin", correct: false },
+        { text: "Security token", correct: false }
+    ],
+    explanation: "TRUST is a utility token used for staking and participating in Intuition."
+},
+{
+    text: "How do bonding curves in Intuition encourage early participation?",
+    options: [
+        { text: "Lower initial prices", correct: true },
+        { text: "Airdropped tokens", correct: false },
+        { text: "Lottery rewards", correct: false }
+    ],
+    explanation: "Early backers pay lower prices on the bonding curve, incentivizing early trust."
+},
+{
+    text: "What happens when more people buy into a claim's bonding curve?",
+    options: [
+        { text: "Claim price rises", correct: true },
+        { text: "Claim price falls", correct: false },
+        { text: "Price stays the same", correct: false }
+    ],
+    explanation: "In bonding curves, buying increases token price as supply decreases."
+},
+{
+    text: "Which platform hosts the Intuition app?",
+    options: [
+        { text: "Web-based portal", correct: true },
+        { text: "Mobile-only app", correct: false },
+        { text: "Desktop-only software", correct: false }
+    ],
+    explanation: "Intuition runs on a web-based portal accessible via browsers."
+},
+{
+    text: "What is a 'trust signal' in Intuition?",
+    options: [
+        { text: "A staking action backing a claim", correct: true },
+        { text: "A blockchain node broadcast", correct: false },
+        { text: "A wallet transaction alert", correct: false }
+    ],
+    explanation: "Trust signals are staking actions showing support for claims."
+},
+{
+    text: "What can happen to claims with little to no trust backing?",
+    options: [
+        { text: "They become less visible", correct: true },
+        { text: "They are permanently deleted", correct: false },
+        { text: "They auto-gain trust", correct: false }
+    ],
+    explanation: "Low-trust claims appear lower in search and discovery results."
+},
+{
+    text: "What is the minimum requirement to participate in bonding curves?",
+    options: [
+        { text: "A wallet and TRUST tokens", correct: true },
+        { text: "A government ID", correct: false },
+        { text: "A mining rig", correct: false }
+    ],
+    explanation: "Users only need a wallet and TRUST tokens to join bonding curves."
+},
+{
+    text: "What type of economy does Intuition create around information?",
+    options: [
+        { text: "Trust economy", correct: true },
+        { text: "Mining economy", correct: false },
+        { text: "Rental economy", correct: false }
+    ],
+    explanation: "Intuition builds a trust economy where information is tradable."
+},
+{
+    text: "Who can create a claim in Intuition?",
+    options: [
+        { text: "Any user", correct: true },
+        { text: "Only admins", correct: false },
+        { text: "Only token holders", correct: false }
+    ],
+    explanation: "Any user can create claims and back them with trust."
+},
+{
+    text: "What is the advantage of curating claims?",
+    options: [
+        { text: "Earn rewards", correct: true },
+        { text: "Get free NFTs", correct: false },
+        { text: "Gain governance rights only", correct: false }
+    ],
+    explanation: "Curators earn rewards for improving claim quality and visibility."
+},
+{
+    text: "What happens when a claim loses trust backing?",
+    options: [
+        { text: "Its price drops on the bonding curve", correct: true },
+        { text: "It is removed automatically", correct: false },
+        { text: "It becomes immutable", correct: false }
+    ],
+    explanation: "Loss of trust leads to price decline, signaling reduced credibility."
+},
+{
+    text: "How does Intuition ensure claim transparency?",
+    options: [
+        { text: "On-chain data storage", correct: true },
+        { text: "Private databases", correct: false },
+        { text: "Centralized logging", correct: false }
+    ],
+    explanation: "Claims and trust data are stored on-chain for transparency."
+}
+{
+    text: "What does the term 'claim' mean in Intuition?",
+    options: [
+        { text: "A verifiable statement stored on-chain", correct: true },
+        { text: "A token swap", correct: false },
+        { text: "A governance vote", correct: false }
+    ],
+    explanation: "In Intuition, a claim is a verifiable statement linked to a subject and stored on-chain."
+},
+{
+    text: "Which consensus mechanism does Intuition use through Ethereum?",
+    options: [
+        { text: "Proof of Authority", correct: false },
+        { text: "Proof of Stake", correct: true },
+        { text: "Proof of Work", correct: false }
+    ],
+    explanation: "Ethereum transitioned to Proof of Stake in 2022, which Intuition inherits as it’s built on Ethereum."
+},
+{
+    text: "What is the main incentive for curators in Intuition?",
+    options: [
+        { text: "Earning transaction fees", correct: false },
+        { text: "Earning rewards for maintaining quality data", correct: true },
+        { text: "Voting on off-chain proposals", correct: false }
+    ],
+    explanation: "Curators earn rewards for maintaining the accuracy and relevance of claims."
+},
+{
+    text: "How can bonding curves in Intuition affect token price?",
+    options: [
+        { text: "By setting a fixed price", correct: false },
+        { text: "By increasing price as demand rises", correct: true },
+        { text: "By decreasing price regardless of demand", correct: false }
+    ],
+    explanation: "Bonding curves dynamically adjust prices upward as more tokens are bought."
+},
+{
+    text: "What is the purpose of subjects in Intuition?",
+    options: [
+        { text: "They act as unique entities that claims can be about", correct: true },
+        { text: "They are the token supply limit", correct: false },
+        { text: "They replace the blockchain ledger", correct: false }
+    ],
+    explanation: "Subjects are unique entities that can have multiple claims made about them."
+},
+{
+    text: "Which of the following is NOT a role in Intuition?",
+    options: [
+        { text: "Claim creator", correct: false },
+        { text: "Curator", correct: false },
+        { text: "Miner", correct: true }
+    ],
+    explanation: "Miners are part of Proof of Work systems; Intuition uses Proof of Stake through Ethereum."
+},
+{
+    text: "Which file format is used for Intuition's open data export?",
+    options: [
+        { text: "CSV", correct: true },
+        { text: "DOCX", correct: false },
+        { text: "PDF", correct: false }
+    ],
+    explanation: "Intuition allows data exports in CSV format for external analysis."
+},
+{
+    text: "What does 'staking' achieve in Intuition?",
+    options: [
+        { text: "Secures claims and signals confidence", correct: true },
+        { text: "Increases transaction speed", correct: false },
+        { text: "Mints new tokens", correct: false }
+    ],
+    explanation: "Staking TRUST tokens on claims shows confidence and secures their visibility."
+},
+{
+    text: "What is a bonding curve pool in Intuition?",
+    options: [
+        { text: "A liquidity pool that sets claim share prices", correct: true },
+        { text: "A group chat for curators", correct: false },
+        { text: "A mining rig setup", correct: false }
+    ],
+    explanation: "Bonding curve pools dynamically determine claim share prices."
+},
+{
+    text: "Which standard does the TRUST token follow?",
+    options: [
+        { text: "ERC-721", correct: false },
+        { text: "ERC-20", correct: true },
+        { text: "BEP-20", correct: false }
+    ],
+    explanation: "TRUST is an ERC-20 token deployed on Ethereum."
+},
+{
+    text: "What is a key benefit of using Intuition for dApps?",
+    options: [
+        { text: "Access to trusted, crowdsourced knowledge", correct: true },
+        { text: "Free cloud storage", correct: false },
+        { text: "Mining rewards", correct: false }
+    ],
+    explanation: "dApps can integrate with Intuition to tap into crowdsourced verified claims."
+},
+{
+    text: "Who determines the subject identity in Intuition?",
+    options: [
+        { text: "The network through unique IDs", correct: true },
+        { text: "A single central authority", correct: false },
+        { text: "Random generation", correct: false }
+    ],
+    explanation: "Subjects are uniquely identified within the network to prevent duplicates."
+},
+{
+    text: "What layer does Intuition describe itself as in Web3?",
+    options: [
+        { text: "Knowledge layer", correct: true },
+        { text: "Execution layer", correct: false },
+        { text: "Settlement layer", correct: false }
+    ],
+    explanation: "Intuition positions itself as a 'knowledge layer' in the Web3 stack."
+},
+{
+    text: "Which economic model does Intuition's bonding curve resemble?",
+    options: [
+        { text: "Supply and demand pricing", correct: true },
+        { text: "Fixed-rate lending", correct: false },
+        { text: "Randomized pricing", correct: false }
+    ],
+    explanation: "Bonding curves adjust prices dynamically based on supply and demand."
+},
+{
+    text: "How are false claims discouraged in Intuition?",
+    options: [
+        { text: "Through staking and slashing", correct: true },
+        { text: "Through private moderation only", correct: false },
+        { text: "Through fixed claim costs", correct: false }
+    ],
+    explanation: "Staking creates a risk of losing tokens if a claim is proven false."
+},
+{
+    text: "What is the function of claim shares?",
+    options: [
+        { text: "Represent stake in a claim", correct: true },
+        { text: "Serve as NFTs", correct: false },
+        { text: "Act as governance tokens", correct: false }
+    ],
+    explanation: "Claim shares represent how much stake an individual has in a claim."
+},
+{
+    text: "Which blockchain feature ensures claims are tamper-proof?",
+    options: [
+        { text: "Immutability", correct: true },
+        { text: "Centralized control", correct: false },
+        { text: "Daily backups", correct: false }
+    ],
+    explanation: "Blockchain immutability ensures claims cannot be altered once recorded."
+},
+{
+    text: "What is a key difference between Intuition and Wikipedia?",
+    options: [
+        { text: "Blockchain-based verification and incentives", correct: true },
+        { text: "Central editorial control", correct: false },
+        { text: "Offline access", correct: false }
+    ],
+    explanation: "Unlike Wikipedia, Intuition uses blockchain to verify and reward contributions."
+},
+{
+    text: "Which category best describes Intuition in crypto?",
+    options: [
+        { text: "Decentralized knowledge protocol", correct: true },
+        { text: "Layer 1 blockchain", correct: false },
+        { text: "Centralized exchange", correct: false }
+    ],
+    explanation: "Intuition is a decentralized knowledge protocol, not a base blockchain."
+},
+{
+    text: "How can developers interact with Intuition?",
+    options: [
+        { text: "Through its APIs and smart contracts", correct: true },
+        { text: "Through phone support", correct: false },
+        { text: "By emailing data", correct: false }
+    ],
+    explanation: "Developers can access Intuition via public APIs and smart contracts."
+},
+{
+    text: "What happens when more tokens are bought in a bonding curve?",
+    options: [
+        { text: "The price increases", correct: true },
+        { text: "The price decreases", correct: false },
+        { text: "The price remains fixed", correct: false }
+    ],
+    explanation: "Bonding curves cause token prices to rise with increased demand."
+},
+{
+    text: "What do claim creators in Intuition primarily contribute?",
+    options: [
+        { text: "Verified information", correct: true },
+        { text: "Token swaps", correct: false },
+        { text: "Liquidity provision", correct: false }
+    ],
+    explanation: "Claim creators contribute verified, staked information to the network."
+},
+{
+    text: "Which Intuition feature aligns incentives for truth-telling?",
+    options: [
+        { text: "Staking and rewards", correct: true },
+        { text: "Central moderators", correct: false },
+        { text: "Private audits only", correct: false }
+    ],
+    explanation: "Staking tokens aligns incentives by rewarding truth and penalizing falsehood."
+},
+{
+    text: "Which gas fees apply to Intuition transactions?",
+    options: [
+        { text: "Ethereum gas fees", correct: true },
+        { text: "No gas fees", correct: false },
+        { text: "Binance Smart Chain fees", correct: false }
+    ],
+    explanation: "Because it’s built on Ethereum, Intuition transactions require ETH gas fees."
+},
+{
+    text: "What is the name of Intuition’s token?",
+    options: [
+        { text: "TRUST", correct: true },
+        { text: "INTU", correct: false },
+        { text: "KNOW", correct: false }
+    ],
+    explanation: "The token powering Intuition is called TRUST."
+},
+{
+    text: "What’s a benefit of open participation in Intuition?",
+    options: [
+        { text: "More diverse data sources", correct: true },
+        { text: "Guaranteed accuracy", correct: false },
+        { text: "No disputes", correct: false }
+    ],
+    explanation: "Open participation increases diversity of data sources, though accuracy still depends on staking incentives."
+},
+{
+    text: "In Intuition, what does a curator do?",
+    options: [
+        { text: "Selects and organizes quality claims", correct: true },
+        { text: "Mines new tokens", correct: false },
+        { text: "Issues subject IDs", correct: false }
+    ],
+    explanation: "Curators select and organize claims to keep quality high."
+},
+{
+    text: "What is the result of staking more TRUST on a claim?",
+    options: [
+        { text: "Increased visibility", correct: true },
+        { text: "Reduced gas fees", correct: false },
+        { text: "Automatic verification", correct: false }
+    ],
+    explanation: "Staking more TRUST increases the claim's visibility in the protocol."
+},
+{
+    text: "What determines a subject’s claim graph?",
+    options: [
+        { text: "All claims made about that subject", correct: true },
+        { text: "The blockchain block height", correct: false },
+        { text: "The curator’s vote", correct: false }
+    ],
+    explanation: "A subject’s claim graph is the set of all claims about it."
+}
+{
+    text: "What type of staking mechanism does Intuition use for TRUST tokens?",
+    options: [
+        { text: "Delegated Proof-of-Stake", correct: false },
+        { text: "Curated staking on knowledge claims", correct: true },
+        { text: "Liquidity pool staking", correct: false }
+    ],
+    explanation: "TRUST tokens are staked directly on specific knowledge claims to indicate belief and earn influence."
+},
+{
+    text: "What is the effect of staking TRUST on a claim?",
+    options: [
+        { text: "Increases the claim’s visibility and potential rewards", correct: true },
+        { text: "Locks the claim for edits", correct: false },
+        { text: "Deletes competing claims", correct: false }
+    ],
+    explanation: "Staking increases a claim’s credibility and visibility in the Intuition network."
+},
+{
+    text: "What is the minimum TRUST stake required to make a claim?",
+    options: [
+        { text: "10 TRUST", correct: false },
+        { text: "1 TRUST", correct: true },
+        { text: "0 TRUST", correct: false }
+    ],
+    explanation: "At least 1 TRUST must be staked to create a new claim."
+},
+{
+    text: "How are rewards earned on Intuition?",
+    options: [
+        { text: "Through mining blocks", correct: false },
+        { text: "Through successful claim alignment", correct: true },
+        { text: "Through network referrals", correct: false }
+    ],
+    explanation: "Rewards are earned when staked claims align with verified network consensus."
+},
+{
+    text: "What happens when a staked claim is proven incorrect?",
+    options: [
+        { text: "Staker loses their stake", correct: true },
+        { text: "Staker’s stake is doubled", correct: false },
+        { text: "Staker keeps stake but loses influence", correct: false }
+    ],
+    explanation: "If proven wrong, the staker forfeits their TRUST stake as part of the truth incentive."
+},
+{
+    text: "Does Intuition have a governance system?",
+    options: [
+        { text: "Yes, powered by TRUST token holders", correct: true },
+        { text: "No, decisions are made by a central team", correct: false },
+        { text: "Yes, but only validators can vote", correct: false }
+    ],
+    explanation: "TRUST holders can participate in decentralized governance proposals."
+},
+{
+    text: "What kind of proposals can TRUST holders vote on?",
+    options: [
+        { text: "Claim disputes, protocol upgrades, and parameter changes", correct: true },
+        { text: "Only token supply changes", correct: false },
+        { text: "Only marketing campaigns", correct: false }
+    ],
+    explanation: "Governance covers disputes, protocol adjustments, and more."
+},
+{
+    text: "Is TRUST inflationary or deflationary?",
+    options: [
+        { text: "Deflationary due to claim slashing", correct: true },
+        { text: "Inflationary with fixed yearly minting", correct: false },
+        { text: "Neither, it is fixed supply", correct: false }
+    ],
+    explanation: "Slashing mechanisms reduce circulating supply over time."
+},
+{
+    text: "What does the Intuition Portal allow users to do?",
+    options: [
+        { text: "Create, stake on, and explore claims", correct: true },
+        { text: "Mine new tokens", correct: false },
+        { text: "Exchange TRUST for other tokens", correct: false }
+    ],
+    explanation: "The Portal is the main interface for interacting with the protocol."
+},
+{
+    text: "What is the primary data structure in Intuition?",
+    options: [
+        { text: "Claims", correct: true },
+        { text: "Smart contracts", correct: false },
+        { text: "NFT collections", correct: false }
+    ],
+    explanation: "Claims form the foundation of Intuition’s knowledge graph."
+},
+{
+    text: "How is a claim verified?",
+    options: [
+        { text: "Through community consensus and staked TRUST", correct: true },
+        { text: "Through automated AI only", correct: false },
+        { text: "By a central authority", correct: false }
+    ],
+    explanation: "Verification is a community-driven process."
+},
+{
+    text: "Which network is Intuition built on?",
+    options: [
+        { text: "Ethereum mainnet", correct: true },
+        { text: "Solana", correct: false },
+        { text: "Binance Smart Chain", correct: false }
+    ],
+    explanation: "It operates on Ethereum to leverage its security and liquidity."
+},
+{
+    text: "What role do bonding curves play in Intuition?",
+    options: [
+        { text: "They determine claim staking and pricing", correct: true },
+        { text: "They are used for token burning", correct: false },
+        { text: "They adjust claim visibility randomly", correct: false }
+    ],
+    explanation: "Bonding curves set stake prices based on claim demand."
+},
+{
+    text: "What does 'claim alignment' mean?",
+    options: [
+        { text: "A claim matches with verified reality or trusted sources", correct: true },
+        { text: "A claim is popular on social media", correct: false },
+        { text: "A claim has the most comments", correct: false }
+    ],
+    explanation: "Alignment means it is consistent with trusted knowledge."
+},
+{
+    text: "Are claims on Intuition immutable?",
+    options: [
+        { text: "Yes, once staked and confirmed they cannot be altered", correct: true },
+        { text: "No, they can be edited anytime", correct: false },
+        { text: "Yes, but only for 24 hours", correct: false }
+    ],
+    explanation: "Claims are immutable once accepted into the protocol."
+},
+{
+    text: "Can multiple users stake on the same claim?",
+    options: [
+        { text: "Yes", correct: true },
+        { text: "No", correct: false },
+        { text: "Only governance members can", correct: false }
+    ],
+    explanation: "Anyone can support an existing claim by staking."
+},
+{
+    text: "What is the purpose of the Intuition Knowledge Graph?",
+    options: [
+        { text: "To connect verified claims into a structured network", correct: true },
+        { text: "To mine new TRUST tokens", correct: false },
+        { text: "To serve as a social feed", correct: false }
+    ],
+    explanation: "The knowledge graph links facts for reliable information."
+},
+{
+    text: "Does Intuition support anonymous participation?",
+    options: [
+        { text: "Yes, wallet-based pseudonymous identities are allowed", correct: true },
+        { text: "No, KYC is required", correct: false },
+        { text: "Yes, but only for reading data", correct: false }
+    ],
+    explanation: "Users can interact without revealing real identities."
+},
+{
+    text: "What happens to TRUST tokens used in a losing dispute?",
+    options: [
+        { text: "They are slashed", correct: true },
+        { text: "They are refunded", correct: false },
+        { text: "They are doubled", correct: false }
+    ],
+    explanation: "Losing side stakes are burned or redistributed."
+},
+{
+    text: "What is the significance of 'proof-of-belief' in Intuition?",
+    options: [
+        { text: "It’s the mechanism of staking to show trust in claims", correct: true },
+        { text: "It’s a block validation method", correct: false },
+        { text: "It’s a marketing slogan", correct: false }
+    ],
+    explanation: "Proof-of-belief is core to the protocol’s truth economy."
+}
+{
+    text: "What does Intuition use to represent claims on-chain?",
+    options: [
+        { text: "NFTs", correct: false },
+        { text: "ERC-1155 tokens", correct: true },
+        { text: "Sidechain tokens", correct: false }
+    ],
+    explanation: "Claims in Intuition are represented using ERC-1155 tokens."
+},
+{
+    text: "Which part of Intuition enables curation of claims?",
+    options: [
+        { text: "Bonding curves", correct: false },
+        { text: "Claim portal", correct: true },
+        { text: "MetaMask integration", correct: false }
+    ],
+    explanation: "The claim portal allows users to curate and explore claims."
+},
+{
+    text: "What incentive mechanism does Intuition use to ensure high-quality claims?",
+    options: [
+        { text: "Proof-of-Stake mining", correct: false },
+        { text: "Bonding curve economics", correct: true },
+        { text: "Random selection", correct: false }
+    ],
+    explanation: "Bonding curve economics incentivizes users to back valuable claims."
+},
+{
+    text: "In Intuition, what can cause a user to lose their staked TRUST?",
+    options: [
+        { text: "Backing incorrect claims", correct: true },
+        { text: "Changing wallet provider", correct: false },
+        { text: "Unstaking too soon", correct: false }
+    ],
+    explanation: "Backing incorrect claims can lead to loss of staked TRUST."
+},
+{
+    text: "Which blockchain’s security model does Intuition inherit?",
+    options: [
+        { text: "Ethereum", correct: true },
+        { text: "Solana", correct: false },
+        { text: "Avalanche", correct: false }
+    ],
+    explanation: "Intuition is built on Ethereum, inheriting its security model."
+},
+{
+    text: "What does Intuition aim to decentralize?",
+    options: [
+        { text: "Data storage and verification", correct: true },
+        { text: "Video streaming", correct: false },
+        { text: "Email services", correct: false }
+    ],
+    explanation: "Intuition decentralizes data storage and verification for trustless systems."
+},
+{
+    text: "Which crypto standard does TRUST token follow?",
+    options: [
+        { text: "ERC-20", correct: true },
+        { text: "ERC-721", correct: false },
+        { text: "BEP-20", correct: false }
+    ],
+    explanation: "TRUST token follows the ERC-20 standard."
+},
+{
+    text: "In Intuition, who can create claims?",
+    options: [
+        { text: "Only verified accounts", correct: false },
+        { text: "Any user", correct: true },
+        { text: "Only the dev team", correct: false }
+    ],
+    explanation: "Any user can create claims on Intuition."
+},
+{
+    text: "How are disputes over claims resolved in Intuition?",
+    options: [
+        { text: "Community staking and voting", correct: true },
+        { text: "Central arbitration", correct: false },
+        { text: "Automated AI filtering", correct: false }
+    ],
+    explanation: "Disputes are resolved through community staking and voting."
+},
+{
+    text: "What is a potential future integration for Intuition?",
+    options: [
+        { text: "AI-based claim verification", correct: true },
+        { text: "Cloud gaming services", correct: false },
+        { text: "Music streaming", correct: false }
+    ],
+    explanation: "The team has discussed integrating AI for enhanced claim verification."
+},
+{
+    text: "What type of governance does Intuition plan to implement?",
+    options: [
+        { text: "DAO governance", correct: true },
+        { text: "Corporate board voting", correct: false },
+        { text: "Proof-of-Authority governance", correct: false }
+    ],
+    explanation: "DAO governance will give token holders decision-making power."
+},
+{
+    text: "Which kind of claims can be created in Intuition?",
+    options: [
+        { text: "Only positive statements", correct: false },
+        { text: "Any factual or belief statement", correct: true },
+        { text: "Only verified facts", correct: false }
+    ],
+    explanation: "Claims can represent any factual or belief-based statement."
+},
+{
+    text: "What is the relationship between Intuition and on-chain identity?",
+    options: [
+        { text: "It ignores identity", correct: false },
+        { text: "It links claims to entities or identities", correct: true },
+        { text: "It replaces identity systems", correct: false }
+    ],
+    explanation: "Claims in Intuition are linked to entities, providing context and trust."
+},
+{
+    text: "Which function does the Intuition Portal serve?",
+    options: [
+        { text: "User dashboard for interacting with claims", correct: true },
+        { text: "Blockchain explorer", correct: false },
+        { text: "Crypto wallet", correct: false }
+    ],
+    explanation: "The portal is the main interface for interacting with claims and staking."
+},
+{
+    text: "What is required to back a claim in Intuition?",
+    options: [
+        { text: "Staking TRUST tokens", correct: true },
+        { text: "Completing KYC", correct: false },
+        { text: "Owning an NFT", correct: false }
+    ],
+    explanation: "Backing a claim requires staking TRUST tokens."
+},
+{
+    text: "Why is Intuition’s claim system described as composable?",
+    options: [
+        { text: "Claims can be linked and reused across applications", correct: true },
+        { text: "Claims disappear after one use", correct: false },
+        { text: "Claims are encrypted permanently", correct: false }
+    ],
+    explanation: "Claims are composable, allowing reuse across the decentralized web."
+},
+{
+    text: "What determines the value of a claim in Intuition?",
+    options: [
+        { text: "The number of backers and amount staked", correct: true },
+        { text: "Length of the claim text", correct: false },
+        { text: "Time since creation", correct: false }
+    ],
+    explanation: "Claim value is based on stake amount and backer count."
+},
+{
+    text: "What is the long-term goal of Intuition?",
+    options: [
+        { text: "To be the universal reputation layer for the internet", correct: true },
+        { text: "To be a meme token", correct: false },
+        { text: "To replace Bitcoin", correct: false }
+    ],
+    explanation: "Intuition’s long-term goal is to serve as a universal reputation layer."
+},
+{
+    text: "Which economic principle is used in Intuition’s bonding curves?",
+    options: [
+        { text: "Price increases with demand", correct: true },
+        { text: "Fixed price per claim", correct: false },
+        { text: "Randomized pricing", correct: false }
+    ],
+    explanation: "Bonding curves ensure claim prices increase as demand rises."
+},
+{
+    text: "Which type of data structure is common in Intuition claims?",
+    options: [
+        { text: "Subject-predicate-object triples", correct: true },
+        { text: "Binary trees", correct: false },
+        { text: "Merkle proofs", correct: false }
+    ],
+    explanation: "Claims often use subject-predicate-object triples for clarity."
+},
+{
+    text: "How can developers integrate Intuition data?",
+    options: [
+        { text: "Through the Intuition API", correct: true },
+        { text: "By scraping the website", correct: false },
+        { text: "Only by joining the DAO", correct: false }
+    ],
+    explanation: "Developers can use the Intuition API for integration."
+},
+{
+    text: "What does 'backing a claim' mean?",
+    options: [
+        { text: "Publicly supporting it by staking TRUST", correct: true },
+        { text: "Posting it on social media", correct: false },
+        { text: "Voting in a DAO poll", correct: false }
+    ],
+    explanation: "Backing means staking TRUST to support a claim."
+},
+{
+    text: "Can claims be challenged in Intuition?",
+    options: [
+        { text: "Yes, through dispute resolution", correct: true },
+        { text: "No, once created they are final", correct: false },
+        { text: "Only by the creator", correct: false }
+    ],
+    explanation: "Claims can be challenged through a community dispute process."
+},
+{
+    text: "Which category does Intuition’s TRUST token fall under?",
+    options: [
+        { text: "Utility token", correct: true },
+        { text: "Stablecoin", correct: false },
+        { text: "Governance-only token", correct: false }
+    ],
+    explanation: "TRUST is primarily a utility token for the ecosystem."
+},
+{
+    text: "What is the benefit of being an early backer of a claim?",
+    options: [
+        { text: "Higher potential rewards", correct: true },
+        { text: "Lower staking fees", correct: false },
+        { text: "Free governance votes", correct: false }
+    ],
+    explanation: "Early backers can earn higher rewards as the claim gains value."
+},
+{
+    text: "What is the primary storage method for Intuition data?",
+    options: [
+        { text: "On-chain smart contracts", correct: true },
+        { text: "Centralized servers", correct: false },
+        { text: "IPFS only", correct: false }
+    ],
+    explanation: "Data is stored in on-chain smart contracts for transparency."
+},
+{
+    text: "What happens when a claim loses backing?",
+    options: [
+        { text: "Its value decreases", correct: true },
+        { text: "It is automatically deleted", correct: false },
+        { text: "It turns into an NFT", correct: false }
+    ],
+    explanation: "When backing is withdrawn, the claim's value and credibility drop."
+},
+{
+    text: "Which social feature does Intuition support?",
+    options: [
+        { text: "Following claims and entities", correct: true },
+        { text: "Private messaging", correct: false },
+        { text: "Photo albums", correct: false }
+    ],
+    explanation: "Users can follow claims and entities for updates."
+},
+{
+    text: "What’s the minimum requirement to use Intuition?",
+    options: [
+        { text: "A crypto wallet", correct: true },
+        { text: "Government-issued ID", correct: false },
+        { text: "A paid subscription", correct: false }
+    ],
+    explanation: "Only a crypto wallet is needed to interact with Intuition."
+}
+{
+    text: "What mechanism allows Intuition to adjust token prices based on supply and demand?",
+    options: [
+        { text: "Bonding curves", correct: true },
+        { text: "Order books", correct: false },
+        { text: "Auctions", correct: false }
+    ],
+    explanation: "Intuition uses bonding curves to determine token prices dynamically."
+},
+{
+    text: "Which blockchain does Intuition primarily operate on?",
+    options: [
+        { text: "Ethereum", correct: true },
+        { text: "Solana", correct: false },
+        { text: "Avalanche", correct: false }
+    ],
+    explanation: "Intuition is built on the Ethereum network."
+},
+{
+    text: "What is a 'claim' in the Intuition ecosystem?",
+    options: [
+        { text: "A statement linking two entities with evidence", correct: true },
+        { text: "A user profile description", correct: false },
+        { text: "A transaction receipt", correct: false }
+    ],
+    explanation: "Claims in Intuition are statements connecting entities, supported by evidence."
+},
+{
+    text: "What token is used to stake in Intuition's bonding curve markets?",
+    options: [
+        { text: "TRUST", correct: true },
+        { text: "ETH", correct: false },
+        { text: "DAI", correct: false }
+    ],
+    explanation: "TRUST is the primary staking token in Intuition's bonding curve markets."
+},
+{
+    text: "Which type of data structure does Intuition promote for decentralized identity?",
+    options: [
+        { text: "Knowledge graphs", correct: true },
+        { text: "Flat files", correct: false },
+        { text: "Hash maps", correct: false }
+    ],
+    explanation: "Intuition uses knowledge graphs to organize decentralized identity data."
+},
+{
+    text: "What role do 'witnesses' play in Intuition?",
+    options: [
+        { text: "They validate claims", correct: true },
+        { text: "They store private keys", correct: false },
+        { text: "They run block explorers", correct: false }
+    ],
+    explanation: "Witnesses validate claims and contribute to the trustworthiness of data."
+},
+{
+    text: "Which wallet type is compatible with Intuition?",
+    options: [
+        { text: "MetaMask", correct: true },
+        { text: "Phantom", correct: false },
+        { text: "Keplr", correct: false }
+    ],
+    explanation: "MetaMask is compatible with the Ethereum-based Intuition protocol."
+},
+{
+    text: "What can bonding curves help prevent in Intuition's token markets?",
+    options: [
+        { text: "Price manipulation by large orders", correct: true },
+        { text: "Wallet hacking", correct: false },
+        { text: "Network congestion", correct: false }
+    ],
+    explanation: "Bonding curves prevent sudden large-order price manipulations."
+},
+{
+    text: "What is a key advantage of using Intuition for identity data?",
+    options: [
+        { text: "Data ownership remains with the user", correct: true },
+        { text: "It uses centralized databases", correct: false },
+        { text: "It requires no blockchain verification", correct: false }
+    ],
+    explanation: "Intuition ensures users maintain ownership over their identity data."
+},
+{
+    text: "Which type of market design does Intuition use for its claims?",
+    options: [
+        { text: "Continuous liquidity markets", correct: true },
+        { text: "Centralized limit order markets", correct: false },
+        { text: "Batch auction markets", correct: false }
+    ],
+    explanation: "Intuition's bonding curves provide continuous liquidity for claims."
+},
+{
+    text: "How does Intuition reward users for curating high-quality claims?",
+    options: [
+        { text: "Through staking rewards", correct: true },
+        { text: "Through random airdrops", correct: false },
+        { text: "Through transaction refunds", correct: false }
+    ],
+    explanation: "Users who stake on accurate claims earn staking rewards."
+},
+{
+    text: "What is a major goal of Intuition's knowledge graph?",
+    options: [
+        { text: "To map trust relationships", correct: true },
+        { text: "To display price charts", correct: false },
+        { text: "To list token holders", correct: false }
+    ],
+    explanation: "The knowledge graph in Intuition maps trust relationships between entities."
+},
+{
+    text: "What is the economic incentive to participate in Intuition's claim markets?",
+    options: [
+        { text: "Potential profit from accurate claims", correct: true },
+        { text: "Guaranteed fixed interest rate", correct: false },
+        { text: "Free NFTs", correct: false }
+    ],
+    explanation: "Participants can profit by staking on accurate claims that gain value."
+},
+{
+    text: "In Intuition, what happens when more people stake on a claim?",
+    options: [
+        { text: "Its token price increases", correct: true },
+        { text: "It becomes invalid", correct: false },
+        { text: "It disappears from the system", correct: false }
+    ],
+    explanation: "Bonding curves make claim token prices rise as more people stake."
+},
+{
+    text: "What type of dApps can be built using Intuition's trust graph?",
+    options: [
+        { text: "Reputation-based dApps", correct: true },
+        { text: "File storage dApps", correct: false },
+        { text: "Mining dApps", correct: false }
+    ],
+    explanation: "Developers can build reputation-based dApps using Intuition's trust graph."
+},
+{
+    text: "Which feature allows Intuition to make data speculation possible?",
+    options: [
+        { text: "Claim tokens via bonding curves", correct: true },
+        { text: "Random data generation", correct: false },
+        { text: "Centralized databases", correct: false }
+    ],
+    explanation: "Bonding curve claim tokens enable speculation on data."
+},
+{
+    text: "What type of consensus does Ethereum use, benefiting Intuition?",
+    options: [
+        { text: "Proof-of-Stake", correct: true },
+        { text: "Proof-of-Work", correct: false },
+        { text: "Delegated Proof-of-Stake", correct: false }
+    ],
+    explanation: "Ethereum's Proof-of-Stake consensus supports Intuition's operations."
+},
+{
+    text: "What does staking on a claim signal in Intuition?",
+    options: [
+        { text: "Trust in that claim", correct: true },
+        { text: "Disinterest", correct: false },
+        { text: "Opposition", correct: false }
+    ],
+    explanation: "Staking signals that the staker trusts the claim's validity."
+},
+{
+    text: "Which token standard is TRUST likely built on?",
+    options: [
+        { text: "ERC-20", correct: true },
+        { text: "ERC-721", correct: false },
+        { text: "BEP-20", correct: false }
+    ],
+    explanation: "TRUST follows the ERC-20 token standard."
+},
+{
+    text: "What is the minimum requirement to create a claim on Intuition?",
+    options: [
+        { text: "Providing entities, relationship, and optional evidence", correct: true },
+        { text: "Just typing text", correct: false },
+        { text: "Uploading a picture only", correct: false }
+    ],
+    explanation: "Claims need entities, relationship, and optionally evidence."
+}
+{
+    text: "What role do validators play in Intuition?",
+    options: [
+        { text: "Creating user interfaces", correct: false },
+        { text: "Confirming transactions and ensuring network security", correct: true },
+        { text: "Designing bonding curves", correct: false }
+    ],
+    explanation: "Validators confirm transactions and maintain the network's security in the Intuition ecosystem."
+},
+{
+    text: "Which consensus mechanism is used by Intuition’s underlying network?",
+    options: [
+        { text: "Proof-of-Work", correct: false },
+        { text: "Proof-of-Stake", correct: true },
+        { text: "Delegated Proof-of-Authority", correct: false }
+    ],
+    explanation: "Intuition operates on a Proof-of-Stake consensus mechanism for efficiency and scalability."
+},
+{
+    text: "What is a key benefit of holding TRUST tokens?",
+    options: [
+        { text: "Access to liquidity mining rewards", correct: false },
+        { text: "Ability to govern and participate in network decisions", correct: true },
+        { text: "Free NFTs", correct: false }
+    ],
+    explanation: "Holding TRUST tokens allows users to participate in governance decisions for the Intuition ecosystem."
+},
+{
+    text: "Which tool does Intuition use for data visualization?",
+    options: [
+        { text: "Intuition Portal", correct: true },
+        { text: "Intuition Wallet", correct: false },
+        { text: "Bonding Tracker", correct: false }
+    ],
+    explanation: "The Intuition Portal is used to visualize and interact with claims, assets, and bonding curves."
+},
+{
+    text: "In Intuition, what is a bonding curve primarily used for?",
+    options: [
+        { text: "Determining staking rewards", correct: false },
+        { text: "Determining token price relative to supply", correct: true },
+        { text: "Setting transaction speeds", correct: false }
+    ],
+    explanation: "Bonding curves adjust token price dynamically based on the available supply."
+},
+{
+    text: "How does Intuition aim to prevent misinformation?",
+    options: [
+        { text: "Through AI filtering only", correct: false },
+        { text: "By using decentralized claims verified through community consensus", correct: true },
+        { text: "By banning anonymous users", correct: false }
+    ],
+    explanation: "Community-verified claims on Intuition help combat misinformation without centralized censorship."
+},
+{
+    text: "What type of blockchain network is Intuition built on?",
+    options: [
+        { text: "Layer 1", correct: false },
+        { text: "Layer 2", correct: true },
+        { text: "Sidechain only", correct: false }
+    ],
+    explanation: "Intuition operates on a Layer 2 network to improve scalability and reduce costs."
+},
+{
+    text: "Which is NOT a use case for TRUST tokens?",
+    options: [
+        { text: "Governance voting", correct: false },
+        { text: "Transaction fee payment", correct: false },
+        { text: "Mining new blocks via Proof-of-Work", correct: true }
+    ],
+    explanation: "TRUST tokens are not mined via Proof-of-Work, as Intuition uses Proof-of-Stake."
+},
+{
+    text: "How are claim creators rewarded in Intuition?",
+    options: [
+        { text: "By staking ETH", correct: false },
+        { text: "By earning TRUST tokens when their claims gain engagement", correct: true },
+        { text: "By selling their claims as NFTs", correct: false }
+    ],
+    explanation: "Creators are incentivized with TRUST tokens for making useful, engaging claims."
+},
+{
+    text: "What is the primary governance mechanism in Intuition?",
+    options: [
+        { text: "Central authority approval", correct: false },
+        { text: "Token-weighted voting", correct: true },
+        { text: "Randomized selection", correct: false }
+    ],
+    explanation: "Governance decisions are made through token-weighted voting using TRUST tokens."
+},
+{
+    text: "Which network fees can be paid with TRUST tokens?",
+    options: [
+        { text: "Ethereum gas fees directly", correct: false },
+        { text: "Transaction and bonding fees in the Intuition ecosystem", correct: true },
+        { text: "Binance Smart Chain fees", correct: false }
+    ],
+    explanation: "TRUST tokens are used to pay transaction and bonding fees within Intuition."
+},
+{
+    text: "What is one major difference between Intuition and traditional data platforms?",
+    options: [
+        { text: "Data is stored on a centralized database", correct: false },
+        { text: "Data is owned and verified by the community", correct: true },
+        { text: "Only verified institutions can post data", correct: false }
+    ],
+    explanation: "Intuition ensures that data is owned, created, and verified by the community."
+},
+{
+    text: "How does Intuition ensure data availability?",
+    options: [
+        { text: "By replicating it on multiple nodes", correct: true },
+        { text: "By hosting it on one central server", correct: false },
+        { text: "By storing it in offline archives", correct: false }
+    ],
+    explanation: "Multiple node replication ensures high availability and censorship resistance."
+},
+{
+    text: "What can users do with a verified claim?",
+    options: [
+        { text: "Stake TRUST tokens to support it", correct: true },
+        { text: "Convert it to BTC", correct: false },
+        { text: "Turn it into a smart contract", correct: false }
+    ],
+    explanation: "Users can stake TRUST tokens on claims they believe in, signaling trust and increasing visibility."
+},
+{
+    text: "Why are bonding curves important for Intuition?",
+    options: [
+        { text: "They ensure predictable price discovery for claims", correct: true },
+        { text: "They speed up transaction confirmation times", correct: false },
+        { text: "They determine validator rewards", correct: false }
+    ],
+    explanation: "Bonding curves dynamically price claims, ensuring transparent and predictable market behavior."
+},
+{
+    text: "Which ecosystem does Intuition primarily integrate with?",
+    options: [
+        { text: "Solana", correct: false },
+        { text: "Ethereum", correct: true },
+        { text: "Avalanche", correct: false }
+    ],
+    explanation: "Intuition primarily interacts with the Ethereum ecosystem."
+},
+{
+    text: "What happens when more tokens are staked on a claim?",
+    options: [
+        { text: "Its price on the bonding curve increases", correct: true },
+        { text: "Its value drops", correct: false },
+        { text: "It becomes inactive", correct: false }
+    ],
+    explanation: "More staking increases the price on the bonding curve."
+},
+{
+    text: "What is one example of a claim in Intuition?",
+    options: [
+        { text: "‘Water boils at 100°C’", correct: true },
+        { text: "‘BTC is a Layer 2 token’", correct: false },
+        { text: "‘The sun is a planet’", correct: false }
+    ],
+    explanation: "Claims can be factual statements that users can support or challenge."
+},
+{
+    text: "How does Intuition encourage early participation in claims?",
+    options: [
+        { text: "Early stakers benefit from lower bonding curve prices", correct: true },
+        { text: "Early stakers receive NFTs", correct: false },
+        { text: "Early stakers skip transaction fees", correct: false }
+    ],
+    explanation: "Joining early allows participants to purchase at lower prices."
+},
+{
+    text: "What happens if a claim loses community support?",
+    options: [
+        { text: "Its price on the bonding curve falls", correct: true },
+        { text: "It becomes permanently banned", correct: false },
+        { text: "It turns into a governance proposal", correct: false }
+    ],
+    explanation: "Fewer stakers means lower bonding curve prices."
+},
+{
+    text: "Which programming language is used in Intuition’s smart contracts?",
+    options: [
+        { text: "Rust", correct: false },
+        { text: "Solidity", correct: true },
+        { text: "C++", correct: false }
+    ],
+    explanation: "Solidity is used for Ethereum-based smart contracts."
+},
+{
+    text: "Can anyone create a claim in Intuition?",
+    options: [
+        { text: "Yes, anyone can create a claim", correct: true },
+        { text: "No, only validators can", correct: false },
+        { text: "Only token holders can", correct: false }
+    ],
+    explanation: "Any user can create claims in the Intuition system."
+},
+{
+    text: "What is a key driver of TRUST token demand?",
+    options: [
+        { text: "Its role in governance and staking on claims", correct: true },
+        { text: "A fixed annual burn", correct: false },
+        { text: "Monthly airdrops", correct: false }
+    ],
+    explanation: "TRUST’s utility in governance and staking drives demand."
+},
+{
+    text: "How can users exit a bonding curve position?",
+    options: [
+        { text: "By selling back their tokens to the curve", correct: true },
+        { text: "By burning their tokens", correct: false },
+        { text: "By converting them to ETH automatically", correct: false }
+    ],
+    explanation: "Users can sell tokens back to the bonding curve at the current market price."
+},
+{
+    text: "Which feature makes Intuition censorship-resistant?",
+    options: [
+        { text: "Centralized moderation", correct: false },
+        { text: "Decentralized claim verification", correct: true },
+        { text: "Daily backups", correct: false }
+    ],
+    explanation: "Decentralized verification prevents any single party from censoring claims."
+},
+{
+    text: "Does Intuition have a native wallet?",
+    options: [
+        { text: "Yes, integrated in the Portal", correct: true },
+        { text: "No, users must connect third-party wallets only", correct: false },
+        { text: "No wallet support at all", correct: false }
+    ],
+    explanation: "The Intuition Portal includes wallet functionality."
+},
+{
+    text: "What kind of staking can be done in Intuition?",
+    options: [
+        { text: "Staking to validate transactions", correct: false },
+        { text: "Staking to support claims", correct: true },
+        { text: "Staking to mine blocks", correct: false }
+    ],
+    explanation: "Users stake on claims they support, signaling trust."
+},
+{
+    text: "How is transparency maintained in Intuition?",
+    options: [
+        { text: "Through public smart contracts and open claim data", correct: true },
+        { text: "Through private agreements", correct: false },
+        { text: "Through central admin reports", correct: false }
+    ],
+    explanation: "Open smart contracts and claim data ensure transparency."
+},
+{
+    text: "What is the relationship between claims and tokens?",
+    options: [
+        { text: "Claims are tokenized through bonding curves", correct: true },
+        { text: "Claims can only exist without tokens", correct: false },
+        { text: "Tokens are unrelated to claims", correct: false }
+    ],
+    explanation: "Each claim is linked to a token via its bonding curve."
+}
+{
+    text: "Which consensus mechanism does Intuition rely on through its host blockchain?",
+    options: [
+        { text: "Proof of Stake", correct: true },
+        { text: "Proof of Work", correct: false },
+        { text: "Delegated Proof of Stake", correct: false }
+    ],
+    explanation: "Intuition operates on top of Ethereum, which is Proof of Stake."
+},
+{
+    text: "What does the Intuition Portal allow users to do?",
+    options: [
+        { text: "Buy NFTs", correct: false },
+        { text: "Create, verify, and trade claims", correct: true },
+        { text: "Stake ETH for rewards", correct: false }
+    ],
+    explanation: "The Portal is Intuition's main interface for managing claims."
+},
+{
+    text: "What is the primary reason Intuition uses bonding curves?",
+    options: [
+        { text: "To determine block size", correct: false },
+        { text: "To price claims dynamically", correct: true },
+        { text: "To reduce gas fees", correct: false }
+    ],
+    explanation: "Bonding curves let prices adjust automatically as more people buy into a claim."
+},
+{
+    text: "Which layer of the Intuition stack handles claim publishing?",
+    options: [
+        { text: "Portal Layer", correct: false },
+        { text: "Motherboard Layer", correct: true },
+        { text: "Intentnet Layer", correct: false }
+    ],
+    explanation: "The Motherboard layer manages the publishing of claims."
+},
+{
+    text: "What role does the Intuition Motherboard layer serve?",
+    options: [
+        { text: "Consensus mechanism", correct: false },
+        { text: "Core logic and claim management", correct: true },
+        { text: "Wallet storage", correct: false }
+    ],
+    explanation: "It’s where the main operational logic of claims is executed."
+},
+{
+    text: "What is the benefit of holding a claim early on Intuition?",
+    options: [
+        { text: "Lower entry cost", correct: true },
+        { text: "More voting power", correct: false },
+        { text: "Higher block rewards", correct: false }
+    ],
+    explanation: "Bonding curve mechanics mean earlier buyers pay less."
+},
+{
+    text: "How does Intuition incentivize early adoption?",
+    options: [
+        { text: "Exclusive NFTs", correct: false },
+        { text: "Cheaper claim prices for early participants", correct: true },
+        { text: "Free ETH airdrops", correct: false }
+    ],
+    explanation: "Early adopters get lower entry prices for claims."
+},
+{
+    text: "In Intuition, what is a 'claim' essentially?",
+    options: [
+        { text: "A statement of fact or belief", correct: true },
+        { text: "A crypto mining operation", correct: false },
+        { text: "A governance proposal", correct: false }
+    ],
+    explanation: "Claims are assertions that can be supported or challenged."
+},
+{
+    text: "What does the Intuition Desktop layer focus on?",
+    options: [
+        { text: "On-chain governance", correct: false },
+        { text: "User-facing applications", correct: true },
+        { text: "Gas optimization", correct: false }
+    ],
+    explanation: "The Desktop layer provides the interface for everyday use."
+},
+{
+    text: "Which statement is true about Intuition’s token TRUST?",
+    options: [
+        { text: "It can be mined", correct: false },
+        { text: "It is used to interact with claims", correct: true },
+        { text: "It replaces ETH entirely", correct: false }
+    ],
+    explanation: "TRUST is required for engaging with claim markets."
+},
+{
+    text: "What determines a claim's price movement in Intuition?",
+    options: [
+        { text: "Time passed since creation", correct: false },
+        { text: "Supply and demand via bonding curves", correct: true },
+        { text: "The gas price", correct: false }
+    ],
+    explanation: "Bonding curves adjust prices based on demand."
+},
+{
+    text: "Where are claim details stored in Intuition?",
+    options: [
+        { text: "Blockchain storage", correct: true },
+        { text: "Local device cache", correct: false },
+        { text: "Centralized SQL database", correct: false }
+    ],
+    explanation: "Claims are stored on-chain for immutability."
+},
+{
+    text: "What is a key benefit of Intuition over traditional data platforms?",
+    options: [
+        { text: "Decentralized trust and verification", correct: true },
+        { text: "Higher speed", correct: false },
+        { text: "Free cloud storage", correct: false }
+    ],
+    explanation: "It distributes trust without central authorities."
+},
+{
+    text: "Which best describes 'intent-powered apps' in Intuition?",
+    options: [
+        { text: "Apps built to follow user intentions", correct: true },
+        { text: "Apps that predict market prices", correct: false },
+        { text: "Apps for staking tokens", correct: false }
+    ],
+    explanation: "They respond to what users aim to achieve, not fixed workflows."
+},
+{
+    text: "What is the currency used to pay for gas fees in Intuition?",
+    options: [
+        { text: "TRUST", correct: false },
+        { text: "ETH", correct: true },
+        { text: "USDC", correct: false }
+    ],
+    explanation: "Since it’s built on Ethereum, gas is paid in ETH."
+},
+{
+    text: "How does Intuition ensure claim data can't be tampered with?",
+    options: [
+        { text: "Storing data off-chain", correct: false },
+        { text: "Using blockchain immutability", correct: true },
+        { text: "Weekly backups", correct: false }
+    ],
+    explanation: "On-chain data is immutable and verifiable."
+},
+{
+    text: "What does 'staking TRUST' allow a user to do?",
+    options: [
+        { text: "Mine new claims", correct: false },
+        { text: "Support claims and earn rewards", correct: true },
+        { text: "Burn ETH", correct: false }
+    ],
+    explanation: "Staking lets users support claims for potential gains."
+},
+{
+    text: "Which part of Intuition connects claim data with other systems?",
+    options: [
+        { text: "Intentnet layer", correct: true },
+        { text: "Desktop layer", correct: false },
+        { text: "Portal layer", correct: false }
+    ],
+    explanation: "The Intentnet layer handles cross-application integration."
+},
+{
+    text: "Who can create a claim on Intuition?",
+    options: [
+        { text: "Only developers", correct: false },
+        { text: "Any user", correct: true },
+        { text: "Only token holders", correct: false }
+    ],
+    explanation: "The platform is open for anyone to create claims."
+},
+{
+    text: "Why might someone buy into a claim early?",
+    options: [
+        { text: "They like the topic", correct: false },
+        { text: "Lower price and potential profit as demand grows", correct: true },
+        { text: "Avoid gas fees", correct: false }
+    ],
+    explanation: "Bonding curves reward early buyers with cheaper prices."
+},
+{
+    text: "Which layer is responsible for executing claim trades?",
+    options: [
+        { text: "Motherboard layer", correct: true },
+        { text: "Desktop layer", correct: false },
+        { text: "Intentnet layer", correct: false }
+    ],
+    explanation: "The Motherboard layer processes claim trades."
+},
+{
+    text: "What can users do if they disagree with a claim?",
+    options: [
+        { text: "Sell their position or create a counter-claim", correct: true },
+        { text: "Delete the claim", correct: false },
+        { text: "Suspend the creator", correct: false }
+    ],
+    explanation: "Disagreement can be expressed by selling or creating counter-claims."
+},
+{
+    text: "What makes a claim's value go up?",
+    options: [
+        { text: "More demand and support", correct: true },
+        { text: "Lower ETH prices", correct: false },
+        { text: "Time since creation", correct: false }
+    ],
+    explanation: "Demand pushes up the bonding curve price."
+},
+{
+    text: "Does Intuition require KYC to use?",
+    options: [
+        { text: "Yes", correct: false },
+        { text: "No", correct: true },
+        { text: "Only for large claims", correct: false }
+    ],
+    explanation: "It’s permissionless and does not require KYC."
+},
+{
+    text: "What powers all Intuition transactions?",
+    options: [
+        { text: "Layer 2 rollups", correct: false },
+        { text: "Ethereum mainnet", correct: true },
+        { text: "Polygon", correct: false }
+    ],
+    explanation: "Intuition uses Ethereum as its underlying network."
+},
+{
+    text: "What does it mean to 'speculate' on data in Intuition?",
+    options: [
+        { text: "Betting on claim truthiness through token positions", correct: true },
+        { text: "Mining data blocks", correct: false },
+        { text: "Selling NFTs", correct: false }
+    ],
+    explanation: "Users buy/sell claim positions as speculation."
+},
+{
+    text: "Which Intuition feature enables data monetization?",
+    options: [
+        { text: "Bonding curve markets", correct: true },
+        { text: "Free hosting", correct: false },
+        { text: "Airdrops", correct: false }
+    ],
+    explanation: "Bonding curves turn claims into tradable assets."
+},
+{
+    text: "What’s one unique design aspect of Intuition?",
+    options: [
+        { text: "On-chain bonding curves for data claims", correct: true },
+        { text: "Fixed price claims", correct: false },
+        { text: "Private blockchain", correct: false }
+    ],
+    explanation: "It turns information into an on-chain market."
+},
+{
+    text: "What do you need to interact with Intuition claims?",
+    options: [
+        { text: "TRUST tokens and an Ethereum wallet", correct: true },
+        { text: "Bitcoin wallet", correct: false },
+        { text: "USDT", correct: false }
+    ],
+    explanation: "Both the native token and ETH wallet are required."
+}
+{
+    text: "What type of asset is the TRUST token?",
+    options: [
+        { text: "ERC-20 token", correct: true },
+        { text: "BEP-20 token", correct: false },
+        { text: "Native L1 coin", correct: false }
+    ],
+    explanation: "TRUST is implemented as an ERC-20 token on Ethereum."
+},
+{
+    text: "What is a key economic role of TRUST in the Intuition protocol?",
+    options: [
+        { text: "Gas payments for Ethereum transactions", correct: false },
+        { text: "Staking to back claims", correct: true },
+        { text: "NFT minting fees", correct: false }
+    ],
+    explanation: "Users stake TRUST tokens to back claims, providing economic weight to statements."
+},
+{
+    text: "Which blockchain is primarily used to deploy Intuition’s core contracts?",
+    options: [
+        { text: "Polygon", correct: false },
+        { text: "Ethereum", correct: true },
+        { text: "Binance Smart Chain", correct: false }
+    ],
+    explanation: "Ethereum is used for the deployment of Intuition’s core smart contracts."
+},
+{
+    text: "In Intuition, what is the purpose of 'bonding curves'?",
+    options: [
+        { text: "To determine NFT rarity", correct: false },
+        { text: "To price claims dynamically based on demand", correct: true },
+        { text: "To verify cryptographic proofs", correct: false }
+    ],
+    explanation: "Bonding curves adjust claim prices based on the demand for backing."
+},
+{
+    text: "What does a 'claim' in Intuition represent?",
+    options: [
+        { text: "An assertion about an entity or fact", correct: true },
+        { text: "A staking reward distribution", correct: false },
+        { text: "A smart contract address", correct: false }
+    ],
+    explanation: "A claim is a statement that users can back or challenge."
+},
+{
+    text: "What is required to 'back' a claim on Intuition?",
+    options: [
+        { text: "A signature only", correct: false },
+        { text: "Staking TRUST tokens", correct: true },
+        { text: "Paying gas in USDC", correct: false }
+    ],
+    explanation: "Backing a claim requires staking TRUST tokens as economic collateral."
+},
+{
+    text: "Who can challenge a claim on Intuition?",
+    options: [
+        { text: "Only the claim creator", correct: false },
+        { text: "Any user", correct: true },
+        { text: "Only verified accounts", correct: false }
+    ],
+    explanation: "Any user can challenge a claim if they disagree."
+},
+{
+    text: "What happens when a claim loses enough backing in Intuition?",
+    options: [
+        { text: "It is deleted from the blockchain", correct: false },
+        { text: "It becomes unbacked and less trusted", correct: true },
+        { text: "It triggers automatic rewards", correct: false }
+    ],
+    explanation: "A claim without sufficient backing loses perceived trust."
+},
+{
+    text: "What mechanism rewards claim backers?",
+    options: [
+        { text: "Bonding curve payouts", correct: true },
+        { text: "Gas refunds", correct: false },
+        { text: "NFT drops", correct: false }
+    ],
+    explanation: "Backers earn rewards when claims they support gain traction."
+},
+{
+    text: "What is the risk for backing a claim in Intuition?",
+    options: [
+        { text: "Losing gas fees", correct: false },
+        { text: "Losing staked TRUST if the claim loses support", correct: true },
+        { text: "Wallet being blacklisted", correct: false }
+    ],
+    explanation: "Backing carries a risk of losing the staked tokens if the claim loses trust."
+},
+{
+    text: "Does Intuition allow anonymous participation?",
+    options: [
+        { text: "Yes", correct: true },
+        { text: "No", correct: false },
+        { text: "Only for verified wallets", correct: false }
+    ],
+    explanation: "Users can interact with the protocol without revealing their identity."
+},
+{
+    text: "Which of these is a goal of Intuition?",
+    options: [
+        { text: "Centralizing data ownership", correct: false },
+        { text: "Decentralizing trust on the internet", correct: true },
+        { text: "Creating a meme coin", correct: false }
+    ],
+    explanation: "The goal is to decentralize how trust is formed and shared online."
+},
+{
+    text: "What does 'entity' mean in Intuition?",
+    options: [
+        { text: "A DAO", correct: false },
+        { text: "A person, place, organization, or concept", correct: true },
+        { text: "Only blockchain addresses", correct: false }
+    ],
+    explanation: "Entities can represent various real-world or digital concepts."
+},
+{
+    text: "How are claims stored in Intuition?",
+    options: [
+        { text: "Only off-chain", correct: false },
+        { text: "On-chain via smart contracts", correct: true },
+        { text: "On centralized servers", correct: false }
+    ],
+    explanation: "Claims are stored on-chain to ensure immutability."
+},
+{
+    text: "Who sets the initial price for backing a claim?",
+    options: [
+        { text: "The bonding curve algorithm", correct: true },
+        { text: "The claim creator manually", correct: false },
+        { text: "The DAO", correct: false }
+    ],
+    explanation: "Bonding curves algorithmically determine starting prices."
+},
+{
+    text: "What is the governance model of Intuition?",
+    options: [
+        { text: "Token-based governance using TRUST", correct: true },
+        { text: "Proof-of-stake validators", correct: false },
+        { text: "No governance", correct: false }
+    ],
+    explanation: "Governance decisions are made using TRUST token voting."
+},
+{
+    text: "Which network fee is paid when interacting with Intuition on Ethereum?",
+    options: [
+        { text: "ETH gas fee", correct: true },
+        { text: "TRUST staking fee", correct: false },
+        { text: "USDT transaction fee", correct: false }
+    ],
+    explanation: "Ethereum transactions require ETH gas fees."
+},
+{
+    text: "What makes Intuition’s trust model different from traditional systems?",
+    options: [
+        { text: "It uses centralized authorities", correct: false },
+        { text: "It is market-driven through staking and bonding curves", correct: true },
+        { text: "It ignores economic incentives", correct: false }
+    ],
+    explanation: "Trust is built economically through user stakes."
+},
+{
+    text: "Can users withdraw their stake from a claim?",
+    options: [
+        { text: "Yes, at any time depending on bonding curve rules", correct: true },
+        { text: "No, it is locked forever", correct: false },
+        { text: "Only during special DAO votes", correct: false }
+    ],
+    explanation: "Bonding curves allow stake withdrawal under certain conditions."
+},
+{
+    text: "What determines a claim’s perceived trustworthiness?",
+    options: [
+        { text: "Number of likes", correct: false },
+        { text: "Amount of staked TRUST", correct: true },
+        { text: "Its age", correct: false }
+    ],
+    explanation: "More staked TRUST signals higher confidence."
+},
+{
+    text: "What kind of incentives does Intuition use?",
+    options: [
+        { text: "Economic incentives via staking", correct: true },
+        { text: "Likes and follows", correct: false },
+        { text: "Random giveaways", correct: false }
+    ],
+    explanation: "Economic incentives ensure meaningful participation."
+},
+{
+    text: "Which type of data can Intuition manage?",
+    options: [
+        { text: "Only crypto prices", correct: false },
+        { text: "Any factual or subjective claims", correct: true },
+        { text: "Only identity verification", correct: false }
+    ],
+    explanation: "The protocol supports all types of claims."
+},
+{
+    text: "Is Intuition’s protocol open-source?",
+    options: [
+        { text: "Yes", correct: true },
+        { text: "No", correct: false },
+        { text: "Only partially", correct: false }
+    ],
+    explanation: "The code is open-source for transparency."
+},
+{
+    text: "Which statement about Intuition is false?",
+    options: [
+        { text: "It centralizes trust", correct: true },
+        { text: "It allows market-based claim validation", correct: false },
+        { text: "It is decentralized", correct: false }
+    ],
+    explanation: "The protocol decentralizes rather than centralizes trust."
+},
+{
+    text: "Which is a potential use case for Intuition?",
+    options: [
+        { text: "Fact-checking news", correct: true },
+        { text: "Streaming movies", correct: false },
+        { text: "Mining Bitcoin", correct: false }
+    ],
+    explanation: "Fact-checking is a real-world application."
+},
+{
+    text: "Can Intuition integrate with other Web3 apps?",
+    options: [
+        { text: "Yes, via its APIs and smart contracts", correct: true },
+        { text: "No, it is isolated", correct: false },
+        { text: "Only with ETH wallets", correct: false }
+    ],
+    explanation: "Its APIs enable interoperability with other platforms."
+},
+{
+    text: "How can projects use Intuition’s claims?",
+    options: [
+        { text: "As trust signals in their own apps", correct: true },
+        { text: "As mining scripts", correct: false },
+        { text: "For gas optimization", correct: false }
+    ],
+    explanation: "Claims can enhance credibility in other dApps."
+},
+{
+    text: "What is a potential long-term vision of Intuition?",
+    options: [
+        { text: "To become the global trust layer of the internet", correct: true },
+        { text: "To replace Bitcoin", correct: false },
+        { text: "To create a gaming network", correct: false }
+    ],
+    explanation: "The vision is to be the internet’s trust infrastructure."
+},
+{
+    text: "What does staking more TRUST on a claim do?",
+    options: [
+        { text: "Increases its trust score", correct: true },
+        { text: "Deletes competing claims", correct: false },
+        { text: "Automatically verifies it", correct: false }
+    ],
+    explanation: "Higher stakes boost perceived trust."
+}
         ];
 
         // Game state
@@ -1493,3 +3993,4 @@
     </script>
 </body>
 </html>
+
