@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INTUITION QUIZ</title>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Add Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <style>
         * {
             margin: 0;
@@ -22,16 +25,32 @@
             min-height: 100vh;
             line-height: 1.6;
             padding: 20px;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 201, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(146, 254, 157, 0.05) 0%, transparent 20%);
         }
         
         .container {
             width: 100%;
             max-width: 600px;
             background-color: #111;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
         }
         
         h1, h2, h3 {
@@ -52,6 +71,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 2px 10px rgba(0, 201, 255, 0.3);
         }
         
         .start-screen p {
@@ -75,10 +95,13 @@
             text-align: center;
             outline: none;
             transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .name-input input:focus {
             background: #333;
+            border-color: rgba(0, 201, 255, 0.3);
+            box-shadow: 0 0 0 2px rgba(0, 201, 255, 0.1);
         }
         
         /* Game Screen */
@@ -92,6 +115,7 @@
             font-size: 1.2rem;
             color: #aaa;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .header {
@@ -108,18 +132,25 @@
             flex: 1;
             min-width: 100px;
             text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .question-number {
             margin-bottom: 10px;
             color: #aaa;
             font-size: 0.9rem;
+            text-align: center;
         }
         
         .question-text {
             font-size: 1.3rem;
             margin-bottom: 25px;
             line-height: 1.5;
+            text-align: center;
+            padding: 0 10px;
         }
         
         .options {
@@ -141,11 +172,17 @@
             font-size: 1rem;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .option:hover {
             background: #2a2a2a;
             transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .option:active {
+            transform: translateY(0);
         }
         
         .option.correct {
@@ -165,9 +202,9 @@
         }
         
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 0 0 8px rgba(46, 125, 50, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
         }
         
         .explanation {
@@ -178,6 +215,12 @@
             display: none;
             background: rgba(255, 255, 255, 0.05);
             border-left: 4px solid #4e54c8;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .progress-container {
@@ -185,18 +228,19 @@
         }
         
         .progress-bar {
-            height: 4px;
+            height: 6px;
             background-color: #222;
-            border-radius: 2px;
+            border-radius: 3px;
             margin-bottom: 5px;
             overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
         }
         
         .progress {
             height: 100%;
             background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
             width: 0%;
-            transition: width 0.5s;
+            transition: width 0.5s ease-out;
         }
         
         /* Game Over Screen */
@@ -212,6 +256,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 2px 10px rgba(0, 201, 255, 0.3);
         }
         
         .final-score {
@@ -231,11 +276,17 @@
             transition: all 0.2s;
             margin: 10px;
             font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .btn:hover {
             background: #333;
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
         }
         
         .btn-primary {
@@ -275,6 +326,7 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
         }
         
         .results-card::before {
@@ -284,8 +336,15 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0, 201, 255, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 201, 255, 0.1) 0%, transparent 70%),
+                        radial-gradient(circle, rgba(146, 254, 157, 0.1) 0%, transparent 70%);
             z-index: 0;
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .results-card-content {
@@ -401,6 +460,7 @@
             border-radius: 8px;
             min-width: 100px;
             flex: 1;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .results-card .stat-value {
@@ -787,10 +847,183 @@
             color: #ff6b6b;
             border: 1px solid rgba(255, 107, 107, 0.3);
         }
+        /* leaderboard */
+        .leaderboard {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            background-color: #111;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .leaderboard h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .leaderboard-table th {
+            text-align: left;
+            padding: 12px 15px;
+            background-color: #222;
+            color: #00C9FF;
+            font-weight: 600;
+        }
+
+        .leaderboard-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .leaderboard-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .leaderboard-table .rank {
+            font-weight: 600;
+            color: #00C9FF;
+            width: 50px;
+        }
+
+        .leaderboard-table .score {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .leaderboard-btn {
+            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .leaderboard-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 201, 255, 0.3);
+        }
+
+        /* Floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Loading animation */
+        .loader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: #00C9FF;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        .loader-text {
+            color: #fff;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Loading overlay -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Generating your results...</div>
+    </div>
+
     <div class="container">
         <!-- Start Screen -->
         <div id="start-screen" class="start-screen">
@@ -813,17 +1046,17 @@
                 <div class="setting-group">
                     <h3>Difficulty Level</h3>
                     <div class="setting-options">
-                        <div class="setting-option selected" data-difficulty="easy" data-time="20">
+                        <div class="setting-option selected" data-difficulty="easy" data-time="22">
                             Easy
-                            <div class="difficulty-label">20 seconds per question</div>
+                            <div class="difficulty-label">22 seconds per question</div>
                         </div>
-                        <div class="setting-option" data-difficulty="medium" data-time="10">
+                        <div class="setting-option" data-difficulty="medium" data-time="12">
                             Medium
-                            <div class="difficulty-label">10 seconds per question</div>
+                            <div class="difficulty-label">12 seconds per question</div>
                         </div>
-                        <div class="setting-option" data-difficulty="hard" data-time="5">
+                        <div class="setting-option" data-difficulty="hard" data-time="7">
                             Hard
-                            <div class="difficulty-label">5 seconds per question</div>
+                            <div class="difficulty-label">7 seconds per question</div>
                         </div>
                     </div>
                 </div>
@@ -899,6 +1132,26 @@
             <button class="btn" id="restart-btn">Try Again</button>
             <button class="btn btn-primary" id="download-btn">Download Results</button>
             <button class="btn btn-twitter" id="share-btn">Share on X</button>
+            <button class="btn btn-primary" id="view-leaderboard-btn">View Leaderboard</button>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboard" class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Leaderboard entries will be inserted here -->
+                </tbody>
+            </table>
+            <button class="leaderboard-btn" id="back-to-results-btn">Back to Results</button>
         </div>
     </div>
 
@@ -949,9 +1202,25 @@
     </div>
 
     <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCNK3ahnGWN9wSi9Be6TlLLANgFym9VjOk",
+            authDomain: "intuition-quiz-47089.firebaseapp.com",
+            databaseURL: "https://intuition-quiz-47089-default-rtdb.firebaseio.com",
+            projectId: "intuition-quiz-47089",
+            storageBucket: "intuition-quiz-47089.appspot.com",
+            messagingSenderId: "390288733467",
+            appId: "1:390288733467:web:5162c471b204015d4f4fbe",
+            measurementId: "G-91FEZYMBEN"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
         // All 300 questions with explanations
         const allQuestions = [
-                    {
+            {
             text: "What is the primary purpose of the Intuition project?",
             options: [
                 { text: "Facilitate decentralized predictions", correct: false },
@@ -3589,7 +3858,6 @@
             explanation: "Higher stakes boost perceived trust."
         }
 
-
         ];
 
         // Game state
@@ -3605,7 +3873,7 @@
         let quizSettings = {
             questionCount: 10,
             difficulty: "easy",
-            timePerQuestion: 20
+            timePerQuestion: 22  // Updated default time for easy
         };
 
         // DOM elements
@@ -3639,10 +3907,45 @@
         const statQuestions = document.getElementById('stat-questions');
         const statTime = document.getElementById('stat-time');
         const statStreak = document.getElementById('stat-streak');
+        const viewLeaderboardBtn = document.getElementById('view-leaderboard-btn');
+        const backToResultsBtn = document.getElementById('back-to-results-btn');
+        const leaderboard = document.getElementById('leaderboard');
+        const leaderboardBody = document.getElementById('leaderboard-body');
+        const loader = document.getElementById('loader');
+        const particlesContainer = document.getElementById('particles');
 
         // Quiz settings elements
         const questionOptions = document.querySelectorAll('.setting-option[data-questions]');
         const difficultyOptions = document.querySelectorAll('.setting-option[data-difficulty]');
+
+        // Create floating particles
+        function createParticles() {
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 1px and 3px
+                const size = Math.random() * 2 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
 
         // Set up quiz settings selection
         questionOptions.forEach(option => {
@@ -3750,10 +4053,12 @@
             const timerText = timerSpan.querySelector('span');
             timerText.textContent = timeLeft;
             
-            if (timeLeft <= 5) {
+            if (timeLeft <= Math.floor(quizSettings.timePerQuestion / 3)) {
                 timerSpan.style.color = '#ff6b6b';
+                timerSpan.style.fontWeight = '600';
             } else {
                 timerSpan.style.color = '#fff';
+                timerSpan.style.fontWeight = 'normal';
             }
         }
 
@@ -3845,6 +4150,14 @@
             // Calculate final percentage
             const percentage = Math.round((correctAnswers / questions.length) * 100);
             
+            // Save to Firebase
+            saveScoreToFirebase(
+                playerName,
+                percentage,
+                quizSettings.difficulty,
+                quizSettings.questionCount
+            );
+            
             // Prepare results card
             cardPlayerName.textContent = playerName.toUpperCase();
             
@@ -3886,21 +4199,98 @@
             resultsCard.style.display = 'block';
         }
 
-        // Restart game
+        function saveScoreToFirebase(name, score, difficulty, questionCount) {
+            try {
+                // Validate data before sending to Firebase
+                if (score < 0 || score > 100) {
+                    console.error("Invalid score value");
+                    return;
+                }
+                if (typeof name !== 'string' || name.length > 20) {
+                    console.error("Invalid name format");
+                    return;
+                }
+                if (!['easy', 'medium', 'hard'].includes(difficulty)) {
+                    console.error("Invalid difficulty level");
+                    return;
+                }
+                if (typeof questionCount !== 'number' || questionCount <= 0) {
+                    console.error("Invalid question count");
+                    return;
+                }
+
+                const leaderboardRef = database.ref('leaderboard');
+                const newEntry = {
+                    name: name.substring(0, 20), // Ensure max length
+                    score: Math.min(100, Math.max(0, score)), // Clamp score 0-100
+                    difficulty: difficulty,
+                    questions: questionCount,
+                    timestamp: firebase.database.ServerValue.TIMESTAMP
+                };
+
+                leaderboardRef.push(newEntry)
+                    .then(() => console.log("Score saved securely!"))
+                    .catch(error => console.error("Save failed:", error));
+            } catch (error) {
+                console.error("Exception:", error);
+            }
+        }
+
+        // Load leaderboard data
+        function loadLeaderboard() {
+            const leaderboardRef = database.ref('leaderboard');
+            
+            // Query: Get top 50 scores ordered highest to lowest
+            leaderboardRef.orderByChild('score').limitToLast(50).on('value', (snapshot) => {
+                const scores = [];
+                
+                snapshot.forEach((childSnapshot) => {
+                    scores.push({
+                        id: childSnapshot.key,
+                        ...childSnapshot.val()
+                    });
+                });
+                
+                // Display sorted high-to-low
+                displayLeaderboard(scores.reverse());
+            });
+        }
+
+        // Display leaderboard data
+        function displayLeaderboard(scores) {
+            leaderboardBody.innerHTML = '';
+            
+            if (scores.length === 0) {
+                leaderboardBody.innerHTML = '<tr><td colspan="4">No scores yet. Be the first!</td></tr>';
+                return;
+            }
+            
+            scores.forEach((entry, index) => {
+                const row = document.createElement('tr');
+                const date = new Date(entry.timestamp).toLocaleDateString();
+                
+                row.innerHTML = `
+                    <td class="rank">${index + 1}</td>
+                    <td>${entry.name}</td>
+                    <td class="score">${entry.score}% (${entry.difficulty}, ${entry.questions}Q)</td>
+                    <td>${date}</td>
+                `;
+                
+                leaderboardBody.appendChild(row);
+            });
+        }
+
+        // Restart game - now goes back to start screen
         restartBtn.onclick = function() {
-            currentQuestion = 0;
-            correctAnswers = 0;
-            streak = 0;
-            maxStreak = 0;
-            scoreSpan.textContent = "0";
-            streakSpan.textContent = streak;
             gameOverScreen.style.display = 'none';
-            gameScreen.style.display = 'block';
-            initGame();
+            startScreen.style.display = 'block';
         };
 
         // Enhanced Download Function
         downloadBtn.onclick = function() {
+            // Show loading overlay
+            loader.style.display = 'flex';
+            
             // Calculate percentage
             const percentage = Math.round((correctAnswers / questions.length) * 100);
             
@@ -3970,11 +4360,15 @@
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
+                
+                // Hide loading overlay
+                loader.style.display = 'none';
             }).catch(err => {
                 console.error('Error generating image:', err);
                 // Restore original styles even if error occurs
                 downloadCard.style.position = originalPosition;
                 downloadCard.style.visibility = originalVisibility;
+                loader.style.display = 'none';
             });
         };
 
@@ -3986,11 +4380,34 @@
             window.open(shareUrl, '_blank', 'width=550,height=420');
         };
 
+        // Leaderboard Button Click Handler
+        viewLeaderboardBtn.addEventListener('click', () => {
+            // Hide game over screen
+            gameOverScreen.style.display = 'none';
+            
+            // Show leaderboard
+            leaderboard.style.display = 'block';
+            
+            // Load leaderboard data
+            loadLeaderboard();
+        });
+
+        // Back Button Handler - now goes back to results page
+        backToResultsBtn.addEventListener('click', () => {
+            leaderboard.style.display = 'none';
+            gameOverScreen.style.display = 'block';
+        });
+
         // Allow pressing Enter to start game
         playerNameInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 startBtn.click();
             }
+        });
+
+        // Initialize particles when page loads
+        window.addEventListener('load', () => {
+            createParticles();
         });
     </script>
 </body>
